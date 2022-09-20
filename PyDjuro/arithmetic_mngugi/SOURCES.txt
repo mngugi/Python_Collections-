@@ -1,0 +1,6 @@
+README.md
+setup.py
+arithmetic_YOUR_USERNAME_HERE.egg-info/PKG-INFO
+arithmetic_YOUR_USERNAME_HERE.egg-info/SOURCES.txt
+arithmetic_YOUR_USERNAME_HERE.egg-info/dependency_links.txt
+arithmetic_YOUR_USERNAME_HERE.egg-info/top_level.txt
