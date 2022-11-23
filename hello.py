@@ -6,8 +6,8 @@ Purpose : Simple hello world function
 programming starts at function modules
 """
 def Hello():
-    print ("Hello World Coders")
+    p = ("Hello World Coders")
+    return p
     
 # call the function hello()    
-Hello() 
-
+print("Call the phrase in the function:", Hello()) 
