@@ -3,7 +3,7 @@
 Spyder Editor
 Author : Mwangi
 Purpose : Global and non-local:
-    - According to https://www.geeksforgeeks.org/keywords-python-set-2/
+    
     - global : This keyword is used to define a variable inside the function to be of a global scope.
     
 """
