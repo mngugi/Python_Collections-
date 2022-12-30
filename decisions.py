@@ -21,16 +21,6 @@ else:
     print ("STOP2!")
 # nested if 
 
-'''
-this part referenced from 
-https://www.geeksforgeeks.org/decision-making-python-else-nested-elif/
-if (condition1):
-   # Executes when condition1 is true
-   if (condition2): 
-      # Executes when condition2 is true
-   # if Block is end here
-# if Block is end here
-'''
 
 i = 10
 if (i == 10): 
