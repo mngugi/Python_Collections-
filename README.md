@@ -1,11 +1,3 @@
-# Python_Programming
-Active Pythoner , exploring python functions def() : 
-
-
-The following snippets are basic level of python programming,these excercises use functions.
-A function is a block of code designed to perform specific tasks.
-A Function has three component that is . Header(def), Body(e.g name_func()) and Call (print) function.
-
 ## hello.py
 **Code:**
 ```python
@@ -828,3 +820,238 @@ In this case, the try block is attempting to cast the user's input to an integer
 
 This is a useful way to handle errors and ensure that your code continues to run smoothly even if something goes wrong. You can use try-except blocks to handle a wide variety of errors, including syntax errors, type errors, and other exceptions that might occur while your code is running.
 
+---
+
+## Graphical User Interface
+
+**Code:**
+```python
+# code creates a textbox
+import tkinter as tk
+from tkinter import *
+
+win = Tk()
+win.resizable(False, False)
+win.title("Text Box Widget")
+
+text = Text(win, height=10)
+text.pack()
+
+win.mainloop()
+
+```
+
+The code creates a GUI using the Tkinter library in Python. The first code creates a text box widget and the second code creates a label widget. The code uses the Tk() function to create a Tkinter window and the .resizable() function to make the window non-resizable. The .title() function sets the title of the window. The Text() and Label() functions are used to create the text box and label widgets, respectively. The .pack() function is used to add the widgets to the window. Finally, the .mainloop() function is used to keep the window open until the user closes it.
+**Output**
+
+![Screenshot from 2023-01-16 13-49-07](https://user-images.githubusercontent.com/6685756/212662009-dc2fce75-fc28-41ae-b2e9-79359327cd59.png)
+
+
+---
+
+### Creat_textbox_withtext.py
+**Code:**
+
+```python
+# code creates a textbox
+import tkinter as tk
+from tkinter import *
+
+win = Tk()
+win.resizable(False, False)
+win.title("Text Box Widget")
+
+text = Text(win, height=10)
+text.pack()
+
+text.insert('1.0', 'Insert module allows us to insert text')
+
+win.mainloop()
+
+```
+
+This code creates a text box widget using the Tkinter library in Python. The Tk() function creates a Tkinter window and the .resizable() function makes the window non-resizable. The .title() function sets the title of the window. The Text() function is used to create the text box widget. The .pack() function adds the widget to the window. The .insert() function is used to insert text into the text box. Finally, the .mainloop() function is used to keep the window open until the user closes it.
+ 
+**Output**
+
+![Screenshot from 2023-01-16 14-10-16](https://user-images.githubusercontent.com/6685756/212664993-8f09924b-eae9-4d3f-93f3-903a07e11385.png)
+
+---
+
+### File_Delete.py
+**Code:**
+
+```python
+# this code deletes files from the directory folder
+
+import os
+from tkinter import *
+
+# Create an instance of tkinter window
+win = Tk()
+win.geometry("700x250")
+
+def Delete_File():
+    if os.path.exists("remove3.txt"):
+        os.remove("remove3.txt")
+    else:
+        print("The file does not exist") 
+    
+Delete_btn = Button(win, text="Delete", command=Delete_File)
+Delete_btn.pack()
+
+win.mainloop()
+
+```
+This code deletes a file called "remove3.txt" from a directory folder. The code uses the Tkinter library in Python to create an instance of a tkinter window. The .geometry() function is used to set the size of the window. The Delete_File() function is used to delete the file from the directory folder using the os.remove() function. The Delete_btn is a button widget used to call the Delete_File() function when clicked. The .pack() function is used to add the button widget to the window. Finally, the .mainloop() function is used to keep the window open until the user closes it.
+
+**Output**
+![Screenshot from 2023-01-16 14-37-14](https://user-images.githubusercontent.com/6685756/212669581-2cbf62bd-4119-483a-89b6-c23d0d48c72c.png)
+
+---
+
+### buttonMsgBox_GUI.py
+**Code:**
+```python
+# this code displays a message in a message box
+
+from tkinter import *
+import tkinter as tk
+from tkinter import messagebox
+
+r = tk.Tk()
+
+def echoPhraseInMsgBox():
+    return messagebox.showinfo("Button Pressed")
+   
+
+
+button = tk.Button(r, text='Print', width=25, command=echoPhraseInMsgBox)
+
+button.pack()
+r.mainloop()
+
+```
+This code creates a button widget using the Tkinter library in Python. The Tk() function creates a Tkinter window. The echoPhraseInMsgBox() function is used to display a message in a message box when the button is pressed using the messagebox.showinfo() function. The button widget is created using the Button() function and is added to the window using the .pack() function. The .mainloop() function is used to keep the window open until the user closes it.
+
+**Output**
+
+![Screenshot from 2023-01-16 15-30-14](https://user-images.githubusercontent.com/6685756/212678657-10fafed3-0dd4-44fa-aebb-1d3d6cf75ba3.png)
+
+---
+
+### button_GUI.py
+**Code:**
+```python
+# In this code a function echoPhrase() is created and
+# it is called by the press of a button in other words 
+# a button can be used for argument parsing.
+# This code also demonstrates customization of functions in python.
+
+
+from tkinter import *
+import tkinter as tk
+
+r = tk.Tk()
+def echoPhrase():
+    print("Echoed message is, Button Pressed")
+
+r.title('Buttons')
+button = tk.Button(r, text='Print', width=25, command=echoPhrase)
+
+button.pack()
+
+```
+This code creates a button widget using the Tkinter library in Python. The Tk() function creates a Tkinter window and the .title() function sets the title of the window. The echoPhrase() function is used to print a message when the button is pressed. The button widget is created using the Button() function and is added to the window using the .pack() function. Finally, the .mainloop() function is used to keep the window open until the user closes it.
+
+**Output**
+
+![Screenshot from 2023-01-16 15-35-56](https://user-images.githubusercontent.com/6685756/212679975-0b9ecdea-87f5-4aff-bef1-6a3e69e4c786.png)
+
+---
+
+### fileOpen.py
+**Code:**
+
+```python
+# this code demonstrates opening of files in python 
+# the code only allows the user to open and read txt files.
+
+from tkinter import *
+from tkinter.ttk import *
+from tkinter.filedialog import askopenfile
+
+r = Tk()
+# this function will open a text file only after button is pressed
+def open_file():
+    f = askopenfile(mode ='r', filetypes =[('text file', '*.txt')]) #only txt files will be opened
+     if f is not None:
+        content = f.read()
+        print(content)
+#Below code is reuseable in the event of opening a file is required
+#with open("File_Open.txt", "r") as f:
+#    Label(r, text=f.read()).pack()
+
+bt= Button(r, text='Read', command= open_file)
+bt.pack(side = TOP, pady = 50)    
+    
+    
+
+r.mainloop()
+
+```
+
+This code creates a button widget using the Tkinter library in Python. The Tk() function creates a Tkinter window. The open_file() function is used to open a text file when the button is pressed using the askopenfile() function. The .read() function is used to read the contents of the file. The button widget is created using the Button() function and is added to the window using the .pack() function. Finally, the .mainloop() function is used to keep the window open until the user closes it.
+
+**Output**
+
+![Screenshot from 2023-01-16 15-46-17](https://user-images.githubusercontent.com/6685756/212681571-4f66fbe6-1c51-47f9-990e-a83d937539f4.png)
+
+---
+
+### test_mult_func.py
+**Code:**
+```python 
+# Import tkinter and Button Widget
+from tkinter import Tk
+from tkinter.ttk import Button
+
+
+# Demo function 1
+def fun1():
+	print("Function 1")
+
+
+# Demo function 2
+def fun2():
+	print("Function 2")
+
+
+if __name__ == "__main__":
+	# Creating top-level window
+	master = Tk()
+
+	# Setting window title
+	master.title("Bind multiple function to Button")
+
+	# Setting window Dimensions
+	master.geometry("400x250")
+
+	# Creating a button with more than one command using lambda
+	button = Button(master, text="Button", command=lambda: [fun1(), fun2()])
+
+	# Attaching button to the top-level window
+	# Always remember to attach your widgets to the top-level
+	button.pack()
+
+	# Mainloop that will run forever
+	master.mainloop()
+```
+This code creates a button widget using the Tkinter library in Python. The Tk() function creates a Tkinter window and the .title() function sets the title of the window. The .geometry() function is used to set the size of the window. The button widget is created using the Button() function and is added to the window using the .pack() function. The command argument of the Button() function is used to bind multiple functions to the button using the lambda keyword. Finally, the .mainloop() function is used to keep the window open until the user closes it.
+
+**Output**
+
+
+![Screenshot from 2023-01-16 15-51-09](https://user-images.githubusercontent.com/6685756/212682466-0c7c068e-4abb-46f1-8b3a-4552393f3c53.png)
+
+---
