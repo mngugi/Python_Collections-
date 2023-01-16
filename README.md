@@ -906,6 +906,7 @@ win.mainloop()
 This code deletes a file called "remove3.txt" from a directory folder. The code uses the Tkinter library in Python to create an instance of a tkinter window. The .geometry() function is used to set the size of the window. The Delete_File() function is used to delete the file from the directory folder using the os.remove() function. The Delete_btn is a button widget used to call the Delete_File() function when clicked. The .pack() function is used to add the button widget to the window. Finally, the .mainloop() function is used to keep the window open until the user closes it.
 
 **Output**
+
 ![Screenshot from 2023-01-16 14-37-14](https://user-images.githubusercontent.com/6685756/212669581-2cbf62bd-4119-483a-89b6-c23d0d48c72c.png)
 
 ---
