@@ -134,6 +134,167 @@ Finally, the code performs some more complex mathematical operations that involv
 In Python, the order of operations follows the standard order of operations (PEDMAS or BODMAS). This means that exponentiation is performed before multiplication and division, which are performed before addition and subtraction. Parentheses can be used to specify the order of operations if needed.
 
 ---
+
+### Arithmetic_operations.py
+**Code:**
+```python
+
+import numpy as np
+# create an array of 5 integers
+arr = np.arange(5)
+print("array1", arr)
+arr2 = np.arange(5,10)
+print ("array2 ",arr2)
+print(" ")
+print ("Addition operator: ")
+a = arr+4
+print(a)
+
+print(" ")
+print ("Subtraction operator: ")
+s = arr-4
+print(s)
+
+print(" ")
+print ("Multiplication operator: ")
+m = arr+4
+print(m)
+
+print(" ")
+print ("Division operator: ")
+d = arr/2
+print(d)
+
+print(" ")
+print ("Modulus operator: ")
+md = arr%4
+print(md)
+
+print(" ")
+print (" ================================ ")
+print ("Arithmetic operations using multidimensional arrays: ")
+print(" ")
+print("Addition operator")
+ai = arr+arr2
+print(ai)
+
+print(" ")
+print("Subtraction operator")
+ai = arr-arr2
+print(ai)
+
+print(" ")
+print ("Multiplication operator: ")
+mi = arr+arr2
+print(mi)
+
+print(" ")
+print ("Division operator: ")
+di = arr/arr2
+print(d)
+
+print(" ")
+print ("Modulus operator: ")
+mdi = arr%arr2
+print(mdi)
+
+print(" ")
+print (" ================================ ")
+print ("Arithmetic operations using sine and square root: ")
+
+
+print(" ")
+print ("sine operator: ")
+sinarr = np.sin(arr)
+print(sinarr)
+
+print(" ")
+print ("square root operator: ")
+sqrtarr = np.sqrt(arr)
+print(sqrtarr)
+
+print(" ")
+print (" ================================ ")
+print (" Multidimentional operations: ")
+
+Arr= np.arange(0,8).reshape(2,4)
+print(Arr)
+
+print(" ")
+print ("Multidimentional array multiplied by ones: ")
+Arr2= np.ones((2,4))
+print(Arr2)
+
+print(" ")
+C= Arr2 * Arr
+print(C)
+
+
+```
+
+---
+
+### matrix_product.py
+**Code:**
+
+```python
+import numpy as np
+xarr= np.arange(0,9).reshape(3,3)
+print (xarr)
+yarr= np.ones((3,3))
+print(yarr)
+print(" ")
+
+print(" ")
+print("Matrx Product")
+xy = np.dot(xarr,yarr)
+print(xy)
+
+print(" ")
+print("Matrx Product using xarr.dot(yarr)")
+xyi = xarr.dot(yarr)
+print(xyi)
+
+```
+
+---
+
+### increment_decrement.py
+**Code:**
+
+```python
+
+import numpy as np
+import math
+print ("Array of :")
+arr = np.arange(5)
+print(arr)
+
+print(" ")
+print("Increment by 1")
+arr[0:5] +=1
+print(arr)
+
+print(" ")
+print("Increment by 1")
+arr[0:5] -=1
+print(arr)
+
+
+print(" ")
+print("Increment by 5")
+arr[0:5] +=5
+print(arr)
+
+print(" ")
+print("Increment by multiplication of 1")
+arr[0:5] *=5
+print(arr)
+
+```
+
+---
+
 ## tutology.py 
 **Code:**
 ```python
