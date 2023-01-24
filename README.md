@@ -1241,6 +1241,9 @@ plt.plot(t,y2,'r--')
 
 ```
 
+The first code block plots a line graph using the Matplotlib library, with a specified line width of 2.0. The second code block uses the NumPy library to create two arrays of data (t and y1, y2) and plots them using the Matplotlib library. The subplot function is used to create two subplots in a single figure, with the first plot using a blue dashed-dot line style and the second plot using a red dashed line style. The plt.show() function is used to display the figure.
+
+
 **Output:**
 [Plotted  Graphs ](https://github.com/mngugi/Python_Programming-/blob/master/Matplot_Numpy.ipynb)
 
@@ -1281,6 +1284,16 @@ plt.savefig('my_chart.png')
 **Output**
 
 [Pyplot.ipynb Graphs ](https://github.com/mngugi/Python_Programming-/blob/master/Pyplot.ipynb)
+
+
+
+This code uses the Matplotlib library to create a line plot. In the first code block, a simple line plot is created by passing a list of numbers to the plt.plot() function. Matplotlib assumes that the list represents the y-values of the chart, and it associates them to the natural sequence of x-values: 0,1,2,3, ...
+
+In the second code block, the same list of numbers is passed to the plt.plot() function, but this time it is followed by the string 'ro', which tells Matplotlib to represent the line using red dots.
+
+In the third code block, the axis range is set by the plt.axis() function, the title of the plot is set by plt.title() function, x and y labels are commented out here, the text is added to the plot by plt.text() function, a grid is added to the plot by plt.grid(True) function and a list of x, y values are plotted using red dots. plt.savefig() function is used to save the figure as an image file ('my_chart.png').
+
+It also uses pandas library but it is not being used here in the given code snippet.
 
 ---
 
@@ -1325,7 +1338,19 @@ d= np.column_stack((arr1,arr2,arr3))
 print(d)
 
 ```
-## spliting_arrays.py
+
+This code uses the NumPy library to demonstrate different ways of stacking arrays. It creates four 1D arrays: arr1, arr2, arr3 and arr4.
+
+The first method demonstrated is vertical stacking, which is done using the np.vstack() function. This function takes a tuple of arrays as an argument and concatenates the arrays along the vertical axis (i.e., adding new rows to the first array). In the code, the np.vstack() function is used to stack arr1, arr2, and arr3 vertically, resulting in a new array a with 3 rows and 5 columns.
+
+The second method demonstrated is horizontal stacking, which is done using the np.hstack() function. This function also takes a tuple of arrays as an argument and concatenates the arrays along the horizontal axis (i.e., adding new columns to the first array). In the code, the np.hstack() function is used to stack arr1, arr2, and arr3 horizontally, resulting in a new array b with 1 row and 15 columns.
+
+The third method demonstrated is row stacking, which is done using the np.row_stack() function. This function is same as vstack. In the code, the np.row_stack() function is used to stack arr1, arr2, and arr3 vertically, resulting in a new array c with 3 rows and 5 columns.
+
+The fourth method demonstrated is column stacking, which is done using the np.column_stack() function. This function is same as hstack. In the code, the np.column_stack() function is used to stack arr1, arr2, and arr3 horizontally, resulting in a new array d with 1 row and 15 columns.
+
+
+### spliting_arrays.py
 **Code:**
 
 ```python
@@ -1371,4 +1396,10 @@ print(" ")
 print(Arr2)
 
 ```
- 
+ This code uses the NumPy library to demonstrate different ways of splitting arrays. It creates three 2D arrays: Arr, Arr1, Arr2.
+
+The first method demonstrated is horizontal splitting, which is done using the np.hsplit() function. This function takes two arguments, first the array that needs to be split and second the indices where the array needs to be split. In the code, the np.hsplit() function is used to split Arr into two parts by index 2, resulting in two new arrays B and C with 3 rows and 2 columns each.
+
+The second method demonstrated is vertical splitting, which is done using the np.vsplit() function. This function takes two arguments, first the array that needs to be split and second the indices where the array needs to be split. In the code, the np.vsplit() function is used to split Arr1 into two parts by index 2, resulting in two new arrays D and E with 2 rows and 4 columns each.
+
+The third method demonstrated is np.split() function, which allows you to split the array into nonsymmetrical parts. It takes three arguments, first the array that needs to be split, second the indices where the array needs to be split and third the axis along which the array needs to be split. In the code, the np.split() function is used to split Arr2 into three parts by the indices 1, 3 along the axis 1, resulting in three new arrays with 2 rows and 1 column, 1 row and 2 column and 2 rows and 2 columns.
