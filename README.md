@@ -395,7 +395,7 @@ z = int(x) +1
 w = float(x) + 2.5
 ```
 
-This code you have provided is a simple script that takes user input and assigns it to the variable `x`. The variable `x` is then converted to an integer and assigned to the variable `z`, and is also converted to a float and assigned to the variable `w`. The variable `y` is assigned the string value '`x is ineger`' (note the typo in the string).
+This code is a simple script that takes user input and assigns it to the variable `x`. The variable `x` is then converted to an integer and assigned to the variable `z`, and is also converted to a float and assigned to the variable `w`. The variable `y` is assigned the string value '`x is ineger`' (note the typo in the string).
 
 Here is a breakdown of what each line does:
 
@@ -975,7 +975,7 @@ except ValueError:
     print("Invalid Number! Try again ")
 
 ```
-The code you have provided is a basic implementation of a `try-except` block in Python. The try block contains the code that might throw an exception, and the except block contains the code that will handle the exception if it is raised.
+The code is a basic implementation of a `try-except` block in Python. The try block contains the code that might throw an exception, and the except block contains the code that will handle the exception if it is raised.
 
 In this case, the try block is attempting to cast the user's input to an integer using the `int()` function. If the input cannot be cast to an integer (for example, if the user enters a string or a float), a `ValueError` will be raised. The except block will catch this error and print a message to the user, telling them to try again.
 
@@ -1423,7 +1423,7 @@ pd.set_option('display.max_columns', False)
 print(df)
 
 ```
-This code is written in Python and it is using two libraries, numpy and pandas.
+This code is using two libraries, numpy and pandas.
 It is loading a CSV file "Cartwheeldata.csv" into a DataFrame object (df) by using the pandas library's read_csv() function. The "store" variable is storing the file name and path of the CSV file.
 
 The type() function is used to check the type of df. The output will be 'pandas.core.frame.DataFrame'.
@@ -1449,7 +1449,7 @@ df_cols = df.columns
 print(df_cols) 
 
 ```
-This code is written in Python and it is using two libraries, numpy and pandas.
+This code is using two libraries, numpy and pandas.
 It is loading a CSV file "Cartwheeldata.csv" into a DataFrame object (df) by using the pandas library's read_csv() function. The "store" variable is storing the file name and path of the CSV file.
 
 The df.columns will return the column names of the dataframe.
@@ -1481,7 +1481,7 @@ j = df.groupby(['Gender', 'GenderGroup']).size()
 print(j)
 
 ```
-This code is written in Python and it is using two libraries, numpy and pandas.
+This code is using two libraries, numpy and pandas.
 
 The first print statement is a string variable which explains the output that will be given later.
 
@@ -1509,7 +1509,7 @@ print(i)
 
 ```
 
-This code is written in Python and it is using two libraries, numpy and pandas.
+This code is using two libraries, numpy and pandas.
 
 It is loading a CSV file "Cartwheeldata.csv" into a DataFrame object (df) by using the pandas library's read_csv() function. The "store" variable is storing the file name and path of the CSV file.
 
