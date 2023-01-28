@@ -1403,3 +1403,138 @@ The first method demonstrated is horizontal splitting, which is done using the n
 The second method demonstrated is vertical splitting, which is done using the np.vsplit() function. This function takes two arguments, first the array that needs to be split and second the indices where the array needs to be split. In the code, the np.vsplit() function is used to split Arr1 into two parts by index 2, resulting in two new arrays D and E with 2 rows and 4 columns each.
 
 The third method demonstrated is np.split() function, which allows you to split the array into nonsymmetrical parts. It takes three arguments, first the array that needs to be split, second the indices where the array needs to be split and third the axis along which the array needs to be split. In the code, the np.split() function is used to split Arr2 into three parts by the indices 1, 3 along the axis 1, resulting in three new arrays with 2 rows and 1 column, 1 row and 2 column and 2 rows and 2 columns.
+
+---
+
+### Data_Management.py
+**Code:**
+
+```python
+import numpy as np
+import pandas as pd
+
+store = "Cartwheeldata.csv"
+df = pd.read_csv(store)
+#pd.set_option('display.max_columns', None)
+
+type(df)
+df.head()
+pd.set_option('display.max_columns', False)
+print(df)
+
+```
+This code is written in Python and it is using two libraries, numpy and pandas.
+It is loading a CSV file "Cartwheeldata.csv" into a DataFrame object (df) by using the pandas library's read_csv() function. The "store" variable is storing the file name and path of the CSV file.
+
+The type() function is used to check the type of df. The output will be 'pandas.core.frame.DataFrame'.
+
+The head() function is used to display the first 5 rows of the DataFrame.
+
+The pd.set_option('display.max_columns', False) line will limit the number of columns displayed when using the print(df) statement, to prevent the output from becoming too wide and difficult to read.
+
+The final print(df) statement will display the entire DataFrame object.
+
+---
+
+### Data_Management_cols.py
+**Code:**
+
+```python
+import numpy as np
+import pandas as pd
+
+store = "Cartwheeldata.csv"
+df = pd.read_csv(store)
+df_cols = df.columns
+print(df_cols) 
+
+```
+This code is written in Python and it is using two libraries, numpy and pandas.
+It is loading a CSV file "Cartwheeldata.csv" into a DataFrame object (df) by using the pandas library's read_csv() function. The "store" variable is storing the file name and path of the CSV file.
+
+The df.columns will return the column names of the dataframe.
+
+The variable df_cols is storing the columns of the dataframe.
+
+The final print(df_cols) statement will display the column names of the dataframe.
+
+### Data_Management_groupby.py
+**Code:**
+
+```python
+
+import numpy as np
+import pandas as pd
+
+a = '''
+This output indicates that we have two types of combinations.
+Case 1: Gender = F & Gender Group = 1
+Case 2: Gender = M & GenderGroup = 2.
+This validates our initial assumption that these two fields 
+essentially portray the same information.
+'''
+print(a)
+store = "Cartwheeldata.csv"
+df = pd.read_csv(store)
+
+j = df.groupby(['Gender', 'GenderGroup']).size()
+print(j)
+
+```
+This code is written in Python and it is using two libraries, numpy and pandas.
+
+The first print statement is a string variable which explains the output that will be given later.
+
+It is loading a CSV file "Cartwheeldata.csv" into a DataFrame object (df) by using the pandas library's read_csv() function. The "store" variable is storing the file name and path of the CSV file.
+
+The variable j is storing the result of the groupby function on the 'Gender' and 'GenderGroup' columns of the dataframe. The size() function returns the count of rows for each group.
+
+The final print(j) statement will display the count of rows for each unique combination of 'Gender' and 'GenderGroup' columns. This will validate the assumption mentioned in the string variable 'a' that these two fields essentially portray the same information.
+
+---
+
+###  Data_Management_splice.py
+**Code:**
+
+```python
+
+import numpy as np
+import pandas as pd
+
+store = "Cartwheeldata.csv"
+df = pd.read_csv(store)
+i = df.loc[:, "Wingspan"]
+
+print(i)
+
+```
+
+This code is written in Python and it is using two libraries, numpy and pandas.
+
+It is loading a CSV file "Cartwheeldata.csv" into a DataFrame object (df) by using the pandas library's read_csv() function. The "store" variable is storing the file name and path of the CSV file.
+
+The df.loc[] function is used for indexing by label and it accepts a boolean array of the same length as the axis being selected. In this case the location is selected by the column "Wingspan".
+
+The variable i is storing the selected column "Wingspan" from the dataframe.
+
+The final print(i) statement will display the values of the column "Wingspan" of the dataframe.
+
+---
+
+### Data_Management_splice2.py
+
+**Code:**
+```python
+import numpy as np
+import pandas as pd
+
+store = "Cartwheeldata.csv"
+df = pd.read_csv(store)
+i = df.loc[:, ["Wingspan", "Height", "Age"]]
+
+print(i)
+
+```
+This code is similar to the previous example, but it is now selecting multiple columns of the dataframe using the df.loc[] function. Instead of a single column, it is now passing a list of column names ["Wingspan", "Height", "Age"]. This will select the columns "Wingspan", "Height", and "Age" of the dataframe.
+
+The final print(i) statement will display the values of the selected columns "Wingspan", "Height", "Age" of the dataframe.
