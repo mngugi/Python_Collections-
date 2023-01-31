@@ -1556,7 +1556,7 @@ location = geocoder.description_for_number(phnumber,"en")
 print(location)
 
 ```
-The code you posted is trying to use the phonenumbers library from the libphonenumber library. This library provides functionality for parsing, formatting, and validating international phone numbers.
+This code is trying to use the phonenumbers library from the libphonenumber library. This library provides functionality for parsing, formatting, and validating international phone numbers.
 
 In this code, the phonenumbers.parse method is used to parse the phone number string number and store the resulting phonenumber object in the phnumber variable. Then the geocoder.description_for_number method is used to get a human-readable description of the geographic area that the phone number belongs to, and it returns the location in English.
 
@@ -1568,7 +1568,7 @@ service_pro = phonenumbers.parse(number)
 print(carrier.name_for_number(service_pro, "en"))
 
 ```
-The code you posted is also using the phonenumbers library, specifically the carrier module. This module provides functionality for determining the carrier (mobile operator) of a phone number.
+This code is using the phonenumbers library, specifically the carrier module. This module provides functionality for determining the carrier (mobile operator) of a phone number.
 
 In this code, the phonenumbers.parse method is used to parse the phone number string number and store the resulting phonenumber object in the service_pro variable. Then the carrier.name_for_number method is used to determine the name of the carrier for the given phone number, and it returns the name in English.
 
