@@ -1,0 +1,3 @@
+#Code below tells the interpreter to load all items from  NLTK book
+from nltk.book import *
+text1 
