@@ -1568,7 +1568,7 @@ service_pro = phonenumbers.parse(number)
 print(carrier.name_for_number(service_pro, "en"))
 
 ```
-This code is using the phonenumbers library, specifically the carrier module. This module provides functionality for determining the carrier (mobile operator) of a phone number.
+This code is is also using the phonenumbers library, specifically the carrier module. This module provides functionality for determining the carrier (mobile operator) of a phone number.
 
 In this code, the phonenumbers.parse method is used to parse the phone number string number and store the resulting phonenumber object in the service_pro variable. Then the carrier.name_for_number method is used to determine the name of the carrier for the given phone number, and it returns the name in English.
 
@@ -1641,4 +1641,259 @@ This code will only work if the location variable has a valid value, and if the 
 **Map output according to open maps**
 ![image](https://user-images.githubusercontent.com/6685756/215795179-822c88df-46c7-41aa-88e2-8867c7ab2e7e.png)
 
+---
 
+### NLP 
+
+#After installing nltk package download the packages required for
+#this book using the code below.
+
+```
+import nltk
+nltk.download()
+
+```
+Code below tells the interpreter to load all items from  NLTK book
+`from nltk.book import *`
+
+### Comon_context.py
+**Code:**
+
+```Python
+#The term common_contexts allows us to examine just the contexts that are shared by
+#two or more words, such as monstrous and very. We have to enclose these words by
+#square brackets as well as parentheses, and separate them with a comma:
+
+from nltk.book import*
+
+print("  ")
+print("Common Contexts")
+text2.common_contexts(["monstrous","very"])
+
+print ("Common contexts for nation, terror and god")
+text4.common_contexts(["nation","terror","god"])
+
+```
+This code uses the Natural Language Toolkit (nltk) library in Python to find the common contexts between two or more words in a text. It imports two texts, "text2" and "text4" from the "nltk.book" corpus.
+
+The first call to the "common_contexts" method finds the common contexts between the words "monstrous" and "very" in "text2". The second call finds the common contexts between the words "nation", "terror", and "god" in "text4". The results are displayed in the output.
+
+---
+
+### Count_Vocabulary.py
+**Code:**
+```python 
+#count the words in a text in a variety of useful ways
+# len is used to  length of a text from start to finish, in terms of the words
+#and punctuation symbols that appear.
+from nltk.book import *
+print ("the number of words in Genesis is :")
+l= len(text3)
+print(l)
+
+```
+This code uses the Natural Language Toolkit (nltk) library in Python to count the number of words in the text "text3" from the "nltk.book" corpus.
+
+The built-in "len" function is used to calculate the length of the text, which is the number of tokens (words and punctuation symbols) in the text. The result is stored in the variable "l" and then printed. This way, you can easily obtain the total number of words in a given text.
+
+---
+
+### Find_Text.py
+**Code:**
+```python
+# this code finds out texts in text1
+from nltk.book import *
+
+print ("  ")
+print ("==== Print texts from text1 =====")
+print (text1)
+print ("==== Print texts from text2 =====")
+print (text2)
+
+```
+
+This code uses the Natural Language Toolkit (nltk) library in Python to print the texts "text1" and "text2" from the "nltk.book" corpus.
+
+The code prints the contents of each text by referencing the variable containing the text. The first print statement outputs "text1" and the second print statement outputs "text2". This way, you can view the full contents of a text and examine it for further analysis.
+
+---
+
+### Search_Text.py
+**Code:**
+```python
+# this code is used for searching texts 
+# here we search the words monstrous in Moby Dick
+# search for the words
+#Sense and Sensibility for the word affection, using text2.concord
+#ance("affection"). Search the book of Genesis to find out how long
+#some people lived, using: text3.concordance("lived"). You could look
+#at text4, the Inaugural Address Corpus, to see examples of English going
+#back to 1789, and search for words like nation, terror,god
+# concordance permits us to see words in context
+
+from nltk.book import *
+print ("   ")
+print ("--- Search monstrous in Moby Dick ----!")
+text1.concordance("monstrous")
+print ("   ")
+print ("--- Search affection in Sense and Sensibility using text2 ----!")
+text2.concordance("affection")
+print ("   ")
+print ("--- Search lived in the book Genesis using text3 ----!")
+text3.concordance("lived")
+print ("   ")
+print ("--- Search for nation,terror and god in the Inaugural Address Corpus using text4 ----!")
+text4.concordance("nation")
+text4.concordance("terror")
+text4.concordance("god")
+
+print (                         "===== end of example1 =====")
+
+```
+This code uses the Natural Language Toolkit (nltk) library in Python to search for specific words in texts from the "nltk.book" corpus.
+The "concordance" method is used to search for specific words in the texts. The first call to the "concordance" method searches for the word "monstrous" in "text1", the second call searches for the word "affection" in "text2", the third call searches for the word "lived" in "text3", and the fourth set of calls searches for the words "nation", "terror", and "god" in "text4". The results display the word in context, showing the words surrounding the searched term in the text. This way, you can understand how the searched word is used in the text and get an idea of its context.
+
+---
+
+### Search_similar_Text.py
+**Code:**
+```python
+#search for words that appear in a similar range of contexts
+#by appending the term similar
+#We can find out by appending the term
+#then inserting the relevant word in parentheses
+from nltk.book import*
+
+print("  ")
+print("Print similar range of words from text1")
+text1.similar("monstrous")
+
+print("  ")
+print("Print similar range of words from text2")
+text2.similar("monstrous")
+
+```
+This code uses the Natural Language Toolkit (nltk) library in Python to search for words that appear in a similar range of contexts as a specific word in two texts from the "nltk.book" corpus.
+
+The "similar" method is used to search for words that appear in a similar range of contexts as the word specified in parentheses. The first call to the "similar" method searches for similar words to "monstrous" in "text1" and the second call searches for similar words in "text2". The results show a list of words that appear in a similar context as the searched word in the given text. This way, you can find words that are semantically related to the word you are searching for.
+
+---
+
+### cal_func_lexical.py
+**Code:**
+```python
+# create a function lexical_diversity and another one for percentage
+from nltk.book import *
+import math 
+
+def lexical_diversity(text):
+    return len(text)/len(set(text))
+    
+    
+def percentage(count,total):
+    return 100*count/total
+    
+print ( lexical_diversity(text3))
+print (lexical_diversity(text5))
+print (percentage(4, 5))
+print ( percentage(text4.count('a'), len(text4)))
+
+```
+This code defines two functions in Python using the Natural Language Toolkit (nltk) library. The first function, "lexical_diversity", takes a text as input and returns the lexical diversity score, which is the ratio of the number of tokens (words and punctuation) in the text to the number of unique tokens.
+
+The second function, "percentage", calculates the percentage of a specific count relative to a total. The input parameters are the count and the total.
+
+At the end, the code calls each function with different inputs and prints the results. The first call to "lexical_diversity" calculates the lexical diversity score for "text3". The second call calculates the lexical diversity score for "text5". The first call to "percentage" calculates the percentage of 4 out of 5, and the second call calculates the percentage of the word 'a' in "text4".
+
+---
+
+###
+**Code:**
+```Python
+#calculate a measure of the lexical richness of the text. The next example
+#shows us that each word is used 16 times on average
+from nltk.book import *
+import math 
+lex = len(text3)/len(set(text3))
+print ("  ")
+print ("Average use of each word is: ")
+print(lex)
+print(" ")
+print ("Word Count is : ")
+lex2 = text3.count("smote")
+print(lex2)
+print(" ")
+print("The percentage of the text from the word is: ")
+lex3 =100 * text4.count("a")/len(text4)
+print(lex3) 
+
+print(" ")
+print ("Word Count is : ")
+lex4 = text5.count("lol")
+print(lex4)
+print(" ")
+print("The percentage of the text from the word is: ")
+lex5 =100 * text4.count("a")/len(text5)
+print(lex5) 
+
+
+```
+**Output**
+
+```Python 
+
+  
+Average use of each word is: 
+16.050197203298673
+
+Word Count is : 
+25
+
+The percentage of the text from the word is: 
+1.0456414859557087
+
+Word Count is : 
+704
+
+The percentage of the text from the word is: 
+0.015640968673628082
+
+```
+---
+
+```python 
+#This code is for generating random texts
+from nltk.book import *
+text3.generate()
+
+```
+The generate() method is not available for the nltk Text object. If you want to generate random text, you can use other methods such as generating random sequences of words, using the random module and various language model techniques such as Markov models or n-grams.
+
+### sorted.py
+**Code:**
+```python
+# the python function set() can be used to obtain vocabularies
+#By wrapping sorted() around the Python expression set(text3) , we obtain a sorted
+#list of vocabulary items, beginning with various punctuation symbols and continuing
+#with words starting with A. All capitalized words precede lowercase words. We dis-
+#cover the size of the vocabulary indirectly, by asking for the number of items in the set,
+#and again we can use len to obtain this number . Although it has 44,764 tokens, this
+#book has only 2,789 distinct words, or “word types.”
+
+from nltk.book import *
+print ("Sorted text are :")
+s=sorted(set(text3))
+print(s)
+
+print ("the number of vocabularies in the set is: ")
+l=len(set(text3))
+print(l)
+
+```
+Sorted text are:
+
+```python
+['!', "'", '(', ')', ',', ',)', '.', '.)', ':', ';', ';)', '?', '?)', 'A', 'Abel', 'Abelmizraim', 'Abidah', 'Abide', 'Abimael', 'Abimelech', 'Abr', 'Abrah', 'Abraham', 'Abram', 'Accad', 'Achamoth', 'Adah', 'Adam', 'Adbeel', 'Admah', 'Adoi', 'Adonai', 'Adonijah', 'Adullam', 'Afek', 'Aglah', 'Ahab', 'Ahaz', 'Ahban', 'Ai', 'Aijeleth', 'Ain', 'Akeldama', 'Akrabbim', 'Alameth', 'All', 'Alvan', 'Am', 'Amariah', 'Amaziah', 'Ambassador', 'Ammihud', 'Amon', 'Amram', 'Amraphel', 'Anaharath', 'Anammelech', 'Ananiah', 'And', 'Andreas', 'Angel', 'Anger', 'Aniam', 'Anipal', 'Anselm', 'Antichrist', 'Antipas', 'Antipatris', 'Aphrah', 'Apollyon', 'Apostle', 'Ar', 'Ararat', 'Araunah', 'Areli', 'Areliah', 'Arnon', 'Arodi', 'Arodite', 'Aron', 'Asa', 'Asaph', 'Ashan', 'Ashdod', 'Ashdothpisgah', 'Asher', 'Ashkelon', 'Ashpenaz', 'Ashur', 'Asia', 'Asshur', 'Assir', '
+
+
+```
