@@ -48,6 +48,30 @@ In this code, the import statement is used to import the keyword module, and the
 
 The output of this code will be a list of all the keywords in Python, such as `and, as, assert, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, and with.` These keywords are reserved words in Python and cannot be used as variable names or function names.
 
+### Alternatively use a Function Method
+
+```python
+
+import keyword 
+def keywords():
+    j = keyword.kwlist
+    return j    
+ # Call the function    
+print ("Python Keyword lists:", keywords())   
+
+```
+The code imports the keyword module, which provides a list of keywords for the Python programming language. Then, the keywords function is defined, which returns the list of keywords stored in the kwlist attribute of the keyword module. Finally, the function is called and the list of keywords is printed.
+
+The output of the code will be a list of all the keywords in Python, like this: 
+
+```
+Python Keyword lists: ['and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'False', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'None', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'True', 'try', 'while', 'with', 'yield']
+
+```
+
+---
+
+
 ## mathOperators.py
 **Code:**
 ```python 
