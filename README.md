@@ -472,6 +472,36 @@ Overall, this code is a simple program that prompts the user to input their pers
 
 
 ---
+
+The statement `if __name__ == "__main__"`: is a standard idiom in Python that is used to determine if a file is being run as the main program or if it's being imported as a module into another program.
+
+When a Python script is executed, the interpreter sets the special name variable to "main". So, the code inside the block `if __name__ == "__main__"`: is executed only when the script is run as the main program, not when it's imported as a module into another program. This allows you to use the code in the script as a library of functions in another script.
+
+Here's a simple example:
+
+```python
+
+def some_function():
+    print("This function can be imported and used in another script.")
+
+if __name__ == "__main__":
+    print("This script is being run as the main program.")
+    some_function()
+
+```
+
+When this script is run as the main program, the output would be:
+
+**Output**
+
+`This script is being run as the main program.`
+`This function can be imported and used in another script.`
+
+However, if the script is imported as a module into another script, the code inside the if __name__ == "__main__": block will not be executed, and only the function some_function() will be available for use.
+
+
+---
+
 ## 1. mainfunction.py
 **Code:**
 ```python
