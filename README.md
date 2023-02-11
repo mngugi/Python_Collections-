@@ -157,6 +157,97 @@ Finally, the code performs some more complex mathematical operations that involv
 
 In Python, the order of operations follows the standard order of operations (PEDMAS or BODMAS). This means that exponentiation is performed before multiplication and division, which are performed before addition and subtraction. Parentheses can be used to specify the order of operations if needed.
 
+**Using Functions**
+
+```python
+# reusing the same code but in python functions()
+print ( " Addition a =  (1+2) and (ai = -1+2.5) " )
+
+def Addition():
+    a = 1+2
+    ai = -1+2.5
+    print("[Addition Answers: ", a , ",", ai)
+Addition()
+
+print ( " Subtraction b=(31-2) and bi=( -9-9) " )
+#Subtraction examples 
+def Subtraction():
+    b = 31 - 2
+    bi = -9-9
+    print('[Subtraction Answers',  b, ',', bi)
+Subtraction()
+
+#Multiplication
+print ( "Multiply c=(4*20) and ci=( 2.5 * 6.5)" )
+def multiply():
+    c = 4*20
+    ci = 2.5*6.5
+    print('[Multiplication Answers',  c, ',', ci)
+multiply()
+
+print("Floor Division  d = ( 9//2.5 ) and di = (0.75//0.5)")
+#Floor Division examples
+'''
+The floor division operator divides the first number by the second
+number and then rounds down the result to the next lowest integer. 
+'''
+def floor():
+    e = ( 9//2.5 )
+    ei = (0.75//0.5)
+    print('[Floor Answers', e , ',' , ei)
+floor()
+
+# Remainder or Modulo (%) examples
+print("Remainder  f = ( 7%3 ) and fi = (0.8%0.6) ")
+def modulo():
+    f = ( 7%3 )
+    fi = (0.8%0.6)
+    print('[Modulo Answers', f , ',' , fi)
+modulo()
+
+# Exponential examples
+print("Exponential   g = ( 5**4 ) and gi = ( 9 **(1/4))")
+def exponential():
+    g = 5**4 
+    gi = 9 **(1/4)
+    print('[Exponential Answers', g , ',' , gi)
+exponential()
+
+# Combinations PEDMAS or BODMAS
+print ( "Mathematical Combinations h = 5**2 + 4/2 - 10  and hi = 24+6 - (12 -3) + 24**2 / 10" )
+def pedmas():
+    h = 5**2 + 4/2 - 10 
+    hi = 24+6 - (12 -3) + 24**2 / 10
+    print('[PEDMAS or BODMAS Answers', h , ',' , hi,'\n')
+pedmas()
+
+print ( " *************** End ****************" )
+
+```
+
+The alternative code provided implements the basic mathematical operations such as addition, subtraction, multiplication, floor division, modulo, exponential, and combinations of these operations (PEDMAS or BODMAS). Each operation is defined as a function and can be called independently. When executed, the code will produce the following output:
+
+```python
+
+Addition a =  (1+2) and (ai = -1+2.5) 
+[Addition Answers:  3 , 1.5
+Subtraction b=(31-2) and bi=( -9-9) 
+[Subtraction Answers 29 , -18
+Multiply c=(4*20) and ci=( 2.5 * 6.5)
+[Multiplication Answers 80 , 16.25
+Floor Division  d = ( 9//2.5 ) and di = (0.75//0.5)
+[Floor Answers 3.0 , 1.0
+Remainder  f = ( 7%3 ) and fi = (0.8%0.6) 
+[Modulo Answers 1 , 0.19999999999999973
+Exponential   g = ( 5**4 ) and gi = ( 9 **(1/4))
+[Exponential Answers 625 , 2.080083823051904
+Mathematical Combinations h = 5**2 + 4/2 - 10  and hi = 24+6 - (12 -3) + 24**2 / 10
+[PEDMAS or BODMAS Answers 11.0 , 212.8 
+
+*************** End ****************
+
+```
+
 ---
 
 ### Arithmetic_operations.py
@@ -1010,6 +1101,69 @@ The first part of the code is a list called `Lists_Participants`, which contains
 The second part of the code is a set called names, which contains six strings. A set is a collection data type in Python that is unordered and does not allow duplicates. The code then uses a for loop to iterate through the set and print out each element.
 
 The third part of the code is a dictionary called names, which contains six key-value pairs. A dictionary is a collection data type in Python that is unordered, changeable, and indexed. It is written using curly brackets, and it consists of keys and values. The code then uses a for loop to iterate through the dictionary and print out each key-value pair.Overall, this code is a simple program that demonstrates the use of lists, sets, and dictionaries in Python, and how to access and print their elements.
+
+
+### listsIteration.ipynb
+**Code:**
+
+```python
+# Lists and Iteration  
+
+cars = ["Benz", "Toyota","Audi", "BMW", "Renault"]
+for i in cars:
+    print (i)
+print("------------\n")
+for j in cars:
+    if len(j) > 4:
+        print(j)
+print("--------------\n")
+print("Print for loop within the list")
+cars_long= [ i for i in cars if len(i) > 3]
+print(cars_long)
+print("--------------\n")
+print("Contacts for each car:\n")
+car_contact = {"Benz-": "benz@daimler.co", "Toyota-":"toyota@toyota.jp.com","Audi-":"audi@quatro.ge.com", "BMW-":"bmw@bm.ge.com",
+               "Renault-":"renault@renault.fr.com"}
+for k,emails in car_contact.items():
+    print(k,emails)
+
+print ("---End!---")
+
+```
+
+This program defines a list of car names called cars, and then uses for loop to iterate over the list and print each element in the list.
+
+In the first loop, it simply prints the car names. The output will be:
+
+`Benz`
+`Toyota`
+`Audi`
+`BMW`
+`Renault`
+
+In the second loop, it checks the length of each car name and if it is greater than 4 characters, it prints the name. The output will be:
+
+`Toyota`
+`Audi`
+`Renault`
+
+In the next section, it uses list comprehension to create another list called cars_long that contains only the names of the cars which have more than 3 characters. The output will be:
+
+
+Print for loop within the list
+`['Toyota', 'Audi', 'Renault']`
+
+Then, it defines a dictionary called car_contact which contains the contact information of each car company, with the car name as the key and the email as the value. Finally, it uses a for loop and the items() method of the dictionary to iterate over the key-value pairs of the dictionary and print each pair. The output will be:
+
+Contacts for each car:
+
+`Benz- benz@daimler.co`
+`Toyota- toyota@toyota.jp.com`
+`Audi- audi@quatro.ge.com`
+`BMW- bmw@bm.ge.com`
+`Renault- renault@renault.fr.com`
+
+The code ends by printing "---End!---".
 
 ---
 ## tryExcept.py
