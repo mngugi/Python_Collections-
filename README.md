@@ -347,6 +347,331 @@ print(C)
 
 ```
 
+**A complex version of this Code**
+```Python
+
+import numpy as np
+import array as arr
+
+# create an array of 5 integers using a function arr1()
+
+def arr1():
+    array1 = arr.array('i', [4,6,7,9,8] )
+    row = ''
+    for n in array1:
+        row += str(n) + ' '
+    print(row)
+
+arr1()
+
+
+print("\nArray2\n")
+
+def arr2():
+    array2 = arr.array('i', [2,3,4,5,4] )
+    row = ''
+    for n in array2:
+        row += str(n) + ' '
+    print(row)
+
+arr2()
+print ("---------------------------------------------------- ")
+print("\n Mathematical Operations using functions()")
+# Add 4 to each element of the array
+print ("\nAddition operator +4: \n")
+def add_4(array1, array2):
+    updated_array1 = [x + 4 for x in array1]
+    updated_array2 = [x + 4 for x in array2]
+    row1 = ''
+    row2 = ''
+    for n in updated_array1:
+        row1 += str(n) + ' '
+    for n in updated_array2:
+        row2 += str(n) + ' '
+    print(row1 + '\n' + row2)
+
+array1 = arr.array('i', [4, 6, 7, 9, 8])
+array2 = arr.array('i', [2, 3, 4, 5, 4])
+
+add_4(array1, array2)
+print ("---------------------------------------------------- ")
+# Subtract 4 to each element of the array
+print ("\nSubtract operator -4: \n")
+def add_4(array1, array2):
+    updated_array1 = [x - 4 for x in array1]
+    updated_array2 = [x - 4 for x in array2]
+    row1 = ''
+    row2 = ''
+    for n in updated_array1:
+        row1 += str(n) + ' '
+    for n in updated_array2:
+        row2 += str(n) + ' '
+    print(row1 + '\n' + row2)
+
+array1 = arr.array('i', [4, 6, 7, 9, 8])
+array2 = arr.array('i', [2, 3, 4, 5, 4])
+
+add_4(array1, array2)
+print ("---------------------------------------------------- ")
+# multiply by 4 to each element of the array
+print ("\nMultiplication operator x4: \n")
+def add_4(array1, array2):
+    updated_array1 = [x * 4 for x in array1]
+    updated_array2 = [x * 4 for x in array2]
+    row1 = ''
+    row2 = ''
+    for n in updated_array1:
+        row1 += str(n) + ' '
+    for n in updated_array2:
+        row2 += str(n) + ' '
+    print(row1 + '\n' + row2)
+
+array1 = arr.array('i', [4, 6, 7, 9, 8])
+array2 = arr.array('i', [2, 3, 4, 5, 4])
+
+add_4(array1, array2)
+print ("---------------------------------------------------- ")
+# Divide by 4 to each element of the array
+print ("\nDivision operator -4: \n")
+def add_4(array1, array2):
+    updated_array1 = [x / 4 for x in array1]
+    updated_array2 = [x / 4 for x in array2]
+    row1 = ''
+    row2 = ''
+    for n in updated_array1:
+        row1 += str(n) + ' '
+    for n in updated_array2:
+        row2 += str(n) + ' '
+    print(row1 + '\n' + row2)
+
+array1 = arr.array('i', [4, 6, 7, 9, 8])
+array2 = arr.array('i', [2, 3, 4, 5, 4])
+
+add_4(array1, array2)
+print ("---------------------------------------------------- ")
+# Modulus 4 to each element of the array
+print ("\nModule operator -4: \n")
+def add_4(array1, array2):
+    updated_array1 = [x - 4 for x in array1]
+    updated_array2 = [x - 4 for x in array2]
+    row1 = ''
+    row2 = ''
+    for n in updated_array1:
+        row1 += str(n) + ' '
+    for n in updated_array2:
+        row2 += str(n) + ' '
+    print(row1 + '\n' + row2)
+
+array1 = arr.array('i', [4, 6, 7, 9, 8])
+array2 = arr.array('i', [2, 3, 4, 5, 4])
+
+add_4(array1, array2)
+print ("---------------------------------------------------- ")
+# Sum the arrays to each element of the array
+print (" Add the 2 arrays: \n")
+def add_arrays(array1, array2):
+    sum_array = [x + y for x, y in zip(array1, array2)]
+    row = ''
+    for n in sum_array:
+        row += str(n) + ' '
+    print(row)
+
+array1 = arr.array('i', [4, 6, 7, 9, 8])
+array2 = arr.array('i', [2, 3, 4, 5, 4])
+
+add_arrays(array1, array2)
+print ("---------------------------------------------------- ")
+#Division of the arrays to each element of the array
+print (" Divide the 2 arrays: \n")
+def add_arrays(array1, array2):
+    sum_array = [x / y for x, y in zip(array1, array2)]
+    row = ''
+    for n in sum_array:
+        row += str(n) + ' '
+    print(row)
+
+array1 = arr.array('i', [4, 6, 7, 9, 8])
+array2 = arr.array('i', [2, 3, 4, 5, 4])
+
+add_arrays(array1, array2)
+print ("---------------------------------------------------- ")
+# Modulus the arrays to each element of the array
+print (" Modulus of the 2 arrays: \n")
+def add_arrays(array1, array2):
+    sum_array = [x + y for x, y in zip(array1, array2)]
+    row = ''
+    for n in sum_array:
+        row += str(n) + ' '
+    print(row)
+
+array1 = arr.array('i', [4, 6, 7, 9, 8])
+array2 = arr.array('i', [2, 3, 4, 5, 4])
+
+add_arrays(array1, array2)
+
+print ("---------------------------------------------------- ")
+print ("Arithmetic operations using sine and square root: ")
+
+import array
+import numpy as np
+
+def sine_arrays(array1, array2):
+    sum_array = np.array([x + y for x, y in zip(array1, array2)])
+    sine_array = np.sin(np.sqrt(sum_array))
+    row = ''
+    for n in sine_array:
+        row += str(n) + ' '
+    print(row)
+
+array1 = array.array('i', [4, 6, 7, 9, 8])
+array2 = array.array('i', [2, 3, 4, 5, 4])
+
+sine_arrays(array1, array2)
+print ("---------------------------------------------------- ")
+print (" Multidimentional operations: ")
+
+def arr1():
+    array1 = np.array([4,6,7,9,8], dtype=int)
+    array1 = np.arange(0,8).reshape(2,4)
+    row = ''
+    for n in array1:
+        row += str(n) + ' '
+    print(row)
+
+arr1()
+
+
+print("\nArray2\n")
+
+def arr2():
+    array2 = np.array([2,3,4,5,4], dtype=int)
+    array2 = np.arange(0,8).reshape(2,4)
+    row = ''
+    for n in array2:
+        row += str(n) + ' '
+    print(row)
+
+arr2()
+
+print ("---------------------------------------------------- ")
+
+
+print ("Multidimentional array multiplied by ones: ")
+
+def arr1():
+    array1 = np.array([4,6,7,9,8], dtype=int)
+    array1 = np.ones((2,4))
+    return array1
+
+def arr2():
+    array2 = np.array([2,3,4,5,4], dtype=int)
+    array2 = np.ones((2,4))
+    return array2
+
+array1 = arr1()
+array2 = arr2()
+result = array1 * array2
+print(result)
+
+
+def arr1():
+    array1 = np.array([4,6,7,9,8], dtype=int)
+    array1 = np.ones((2,4))
+    row = ''
+    for n in array1:
+        row += str(n) + ' '
+    print(row)
+
+arr1()
+
+
+print("\nArray2\n")
+
+def arr2():
+    array2 = np.array([2,3,4,5,4], dtype=int)
+    array2 = np.ones((2,4))
+    row = ''
+    for n in array2:
+        row += str(n) + ' '
+    print(row)
+
+arr2()
+
+
+```
+
+
+code creates two arrays of integers, array1 and array2, and performs various mathematical operations on them. The functions used to perform the operations all have the same name add_4, which is misleading and could be confusing. It would be better to have descriptive names for the functions that clearly indicate what they do, like add_four, subtract_four, multiply_by_four, divide_by_four, and modulus_four.
+
+You also use a for loop to create a string representation of each array after the mathematical operations have been performed, but then you print the string representation, which is not the best way to display the arrays.
+
+**Simple version of this code**
+
+It's better to use the built-in print function to display the arrays, either directly or by converting them to a NumPy array first. For example:
+
+```python
+
+import numpy as np
+import array as arr
+
+def display_array(arr):
+    print(np.array(arr))
+
+def arr1():
+    return arr.array('i', [4,6,7,9,8] )
+
+def arr2():
+    return arr.array('i', [2,3,4,5,4] )
+
+def add_four(arr):
+    return [x + 4 for x in arr]
+
+def subtract_four(arr):
+    return [x - 4 for x in arr]
+
+def multiply_by_four(arr):
+    return [x * 4 for x in arr]
+
+def divide_by_four(arr):
+    return [x / 4 for x in arr]
+
+def modulus_four(arr):
+    return [x % 4 for x in arr]
+
+array1 = arr1()
+array2 = arr2()
+
+print("Array1:")
+display_array(array1)
+
+print("Array2:")
+display_array(array2)
+
+print("Add Four:")
+display_array(add_four(array1))
+display_array(add_four(array2))
+
+print("Subtract Four:")
+display_array(subtract_four(array1))
+display_array(subtract_four(array2))
+
+print("Multiply by Four:")
+display_array(multiply_by_four(array1))
+display_array(multiply_by_four(array2))
+
+print("Divide by Four:")
+display_array(divide_by_four(array1))
+display_array(divide_by_four(array2))
+
+print("Modulus Four:")
+display_array(modulus_four(array1))
+display_array(modulus_four(array2))
+
+```
+
+This code separates the creation of the arrays from the operations performed on them, which makes the code more readable and easier to understand. The use of descriptive function names and the display_array function make it clear what each operation does and what the resulting arrays look like.
+
+
 ---
 
 ### matrix_product.py
