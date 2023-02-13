@@ -601,7 +601,7 @@ arr2()
 ```
 
 
-code creates two arrays of integers, array1 and array2, and performs various mathematical operations on them. The functions used to perform the operations all have the same name add_4, which is misleading and could be confusing. It would be better to have descriptive names for the functions that clearly indicate what they do, like add_four, subtract_four, multiply_by_four, divide_by_four, and modulus_four.
+code creates two arrays of integers, array1 and array2, and performs various mathematical operations on them. The functions used to perform the operations all have the same name add_4, please chose a different name to avoid confusion. It would be better to have descriptive names for the functions that clearly indicate what they do, like add_four, subtract_four, multiply_by_four, divide_by_four, and modulus_four.
 
 You also use a for loop to create a string representation of each array after the mathematical operations have been performed, but then you print the string representation, which is not the best way to display the arrays.
 
