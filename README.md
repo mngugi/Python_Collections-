@@ -8,6 +8,7 @@ Author : Mwangi
 Purpose : Simple hello world function
 programming starts at function modules
 """
+if __name__ == '__main__':
 def Hello():
     p = ("Hello World Coders")
     return p
