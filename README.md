@@ -8,7 +8,6 @@ Author : Mwangi
 Purpose : Simple hello world function
 programming starts at function modules
 """
-if __name__ == '__main__':
 def Hello():
     p = ("Hello World Coders")
     return p
@@ -976,6 +975,60 @@ After the module is imported, the code in the current file continues to execute,
 Importing a module allows you to reuse code and organize your program into multiple files. It is a common practice to put related functions and variables in a module, and then import the module into your program when needed.Overall, importing modules is a useful way to structure and organize your code, and to reuse code across multiple programs.
 
 ---
+### More Functions Example
+```python
+
+# python dictionary program that keeps cattle data
+# create a dictionary called cattle_dict
+# create a function getget_cattle
+# use a for loop to iterate through the cattle_dict 
+# and nested it using an if statement condition to select the 
+# correct cow number
+
+cattle_dict = [{'number': 258, 'name freshian': 'blackwhite','product': 'lean milk'
+               },{'number': 259, 'name holsten': 'blackwhite','product': 'fat milk'},
+               {'number': 257, 'name boran': 'brown','product': 'beef'} ]
+
+def get_cattle(number):
+    for cow in cattle_dict:
+        if cow ['number'] == number:
+            return cow
+print(get_cattle(257))
+
+cattle_dict = {258:{'number': 258, 'name freshian': 'blackwhite','product': 'lean milk'
+               },259:{'number': 259, 'name holsten': 'blackwhite','product': 'fat milk'},
+               257:{'number': 257, 'name boran': 'brown','product': 'beef'} }
+
+def get_cattle(number):
+   return cattle_dict[number]
+print(get_cattle(257))
+
+```
+This code that creates a dictionary called cattle_dict, defines a function called get_cattle, and prints the result of calling get_cattle with the argument 257. The function get_cattle takes a number argument and returns a dictionary with the cattle data that matches the given number.
+
+Here's how the code works:
+
+    The cattle_dict dictionary contains three dictionaries, each with the cattle data for a different cow. The cattle data includes a number, a name that specifies the breed of the cow, and a product that the cow is used for (milk or beef).
+    The get_cattle function takes a number argument, which is the number of the cow whose data we want to retrieve.
+    The function uses a for loop to iterate through each dictionary in cattle_dict.
+    For each dictionary, the function uses an if statement to check if the number key in the dictionary matches the number argument passed to the function.
+    If a match is found, the function returns the dictionary with the cattle data for the corresponding cow.
+    If no match is found, the function returns None.
+
+In this case, calling get_cattle(257) returns
+
+
+The function get_cattle takes a number argument and returns the corresponding cattle dictionary from the cattle_dict based on the number key.
+
+In the given cattle_dict, there are three cattle dictionaries with keys 257, 258, and 259. The function get_cattle will return the cattle dictionary that matches the number argument.
+
+In this case, when we call get_cattle(257), it will return the dictionary {'number': 257, 'name boran': 'brown', 'product': 'beef'} because this dictionary corresponds to the 257 key in cattle_dict.
+
+Therefore, the output of print(get_cattle(257)) will be:
+
+{'number': 257, 'name boran': 'brown', 'product': 'beef'}
+
+
 
 ## global_nonlocal.py
 **Code:**
