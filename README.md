@@ -2484,3 +2484,57 @@ Sorted text are:
 
 
 ```
+
+---
+
+### comprehensions.py
+**Code:**
+
+```python
+Using range function:
+nines = [x for x in range(100) if x%9 == 0]
+print(nines)
+x_values = [i for i in range(12)]
+print('code uses a list comprehension to generate the list of x values that\n' 
+      'satisfy the equation 9x = [0, 9, 18, 27, 36, 45, 54, 63, 72, 81, 90, 99].',x_values)
+
+
+```
+code will generate the list of x values that satisfy the equation 9x = [0, 9, 18, 27, 36, 45, 54, 63, 72, 81, 90, 99] using a list comprehension with the range() function. The first print statement prints the list of nines which contains all the values of x between 0 and 99 that are divisible by 9. The second print statement prints a string that describes the code, followed by the list of x values that satisfy the equation 9x = [0, 9, 18, 27, 36, 45, 54, 63, 72, 81, 90, 99].
+
+---
+
+###  Mapping.ipynb
+**Code:**
+
+```python 
+import pandas as pd
+import matplotlib.pyplot as plt
+import geopandas as gpd
+# set the filepath and load
+fp = "District_Boundary.shp"
+#reading the file stored in variable fp
+map_df = gpd.read_file(fp)
+# check data type so we can see that this is not a normal dataframe, but a GEOdataframe
+map_df.head()
+#plotting the map of the shape file preview of the maps without data in it
+map_df.plot()
+
+```
+**Output**
+[Mappint.ipynb](https://github.com/mngugi/Python_Programming-/blob/master/Mapping.ipynb)
+
+
+This code uses the Python packages pandas, matplotlib, and geopandas to read and plot a shapefile containing district boundaries. Here is a step-by-step explanation of what the code does:
+
+    The first three lines of code import the necessary packages: pandas, matplotlib, and geopandas.
+    The next line sets the variable fp to the filepath of the shapefile we want to read.
+    The following line reads the shapefile into a GeoDataFrame and stores it in the variable map_df.
+    The head() method is then called on map_df to show the first few rows of data in the GeoDataFrame. This is optional and only serves to provide a preview of the data.
+    Finally, the plot() method is called on map_df to plot the district boundaries on a map. This will show a preview of the map without any data on it.
+
+Note that to see the plot, you may need to call the show() method of plt, like so:
+
+`plt.show()`
+
+Also note that the code assumes that the shapefile exists in the specified filepath and is properly formatted. If the shapefile is not found or is not in the correct format, the code will raise an error.
