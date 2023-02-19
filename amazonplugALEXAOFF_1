@@ -1,0 +1,2 @@
+Unnamed,L4_tcp,L4_udp,L7_http,L7_https,port_class_src,port_class_dst,pck_size,ip_dst_new,ethernet_frame_size,ttl,total_length,protocol,source_port,dest_port,DNS_count,NTP_count,ARP_count,cnt,L3_ip_dst_,count,most_freq_d_ip,most_freq_prot,most_freq_sport,most_freq_dport,sum_et,min_et,max_et	med_et,average_et,skew_et,kurt_et,var,q3,q1,iqr,sum_e	min_e,max_e,med,average,skew_e,kurt_e,var_e,q3_e,q1_e,iqr_e,epoch_timestamp,inter_arrival_time,time_since_previously_displayed_frame
+
