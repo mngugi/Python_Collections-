@@ -2538,3 +2538,47 @@ Note that to see the plot, you may need to call the show() method of plt, like s
 `plt.show()`
 
 Also note that the code assumes that the shapefile exists in the specified filepath and is properly formatted. If the shapefile is not found or is not in the correct format, the code will raise an error.
+
+---
+
+### Python_Widgets.ipynb
+
+```python 
+import ipywidgets as widgets
+
+ignition = widgets.ToggleButton(
+    value=False,
+    description='Start Engine',
+    button_style='success',
+    tooltip='Engage your Engine',
+    icon='rocket'
+)
+
+speed_slider = widgets.IntSlider(
+    value=0,
+    min=0,
+    max=100,
+    step=1,
+    description='Speed:',
+    orientation='horizontal',
+    readout=True,
+    readout_format='d'
+)
+
+output = widgets.Output()
+
+display(ignition, speed_slider, output)
+
+def on_value_change(change):
+    with output:
+        if change['new'] == True:
+            print("Engine started at speed", speed_slider.value)
+        else:   
+            print("Engine stopped")
+
+ignition.observe(on_value_change, names='value')
+
+```
+This creates an integer slider widget that allows you to select a value between 0 and 100, representing the speed of the engine. You can add this widget to the existing code by placing it after the ignition widget, and then updating the on_value_change function to use the speed_slider value when the engine is started.This code will now print out the speed value selected on the speed_slider widget when the engine is started.
+
+---
