@@ -600,7 +600,6 @@ arr2()
 
 ```
 
-
 code creates two arrays of integers, array1 and array2, and performs various mathematical operations on them. The functions used to perform the operations all have the same name add_4, please chose a different name to avoid confusion. It would be better to have descriptive names for the functions that clearly indicate what they do, like add_four, subtract_four, multiply_by_four, divide_by_four, and modulus_four.
 
 You also use a for loop to create a string representation of each array after the mathematical operations have been performed, but then you print the string representation, which is not the best way to display the arrays.
@@ -732,6 +731,36 @@ arr[0:5] *=5
 print(arr)
 
 ```
+---
+### Median 
+
+```Html
+an algorithm to find the median of a given dataset:
+
+    1. Arrange the dataset in ascending order.
+    2. Check if the number of values in the dataset is odd or even:
+        -If odd, the median is the middle value of the dataset.
+        -If even, the median is the average of the two middle values of the dataset.
+   3. Return the median as the output.
+
+
+```
+Here is the python code
+
+```Python
+def find_median(dataset):
+    dataset_sorted = sorted(dataset)
+    n = len(dataset_sorted)
+    if n % 2 == 1:
+        median = dataset_sorted[n//2]
+    else:
+        median = (dataset_sorted[n//2 - 1] + dataset_sorted[n//2])/2
+    return median
+
+
+```
+The find_median() function takes a dataset as input, arranges it in ascending order using the sorted() function, checks if the number of values is odd or even using the modulus operator, and returns the median as output.
+
 
 ---
 
