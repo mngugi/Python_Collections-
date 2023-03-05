@@ -3056,6 +3056,11 @@ print(result)
 
 
 ```
+The | operator is used to perform a set union operation on the sets a and b.
+The resulting set after the union operation is {1, 2, 3, 4, 5, 6}.
+The elements of the resulting set are unpacked into variables c, *d, and e.
+The * operator is used to assign all the elements except the first and last to variable d.
+So d will contain the elements [2, 4, 6].
 The two input lists l1 and l2 represent the numbers 342 and 465 respectively.
 The lists are reversed so that we can start adding from the least significant digit.
 The zip function is used to create tuples of corresponding elements from the two lists.
