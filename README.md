@@ -3887,3 +3887,116 @@ Next, it loops through all items in res2 and extracts the 'user' key into res4, 
 Finally, it loops through all items in the 'statuses' key of res and prints the 'screen_name' and 'created_at' keys from the 'user' key of each item.
 
 ---
+### Filter.py
+**Code**
+```python
+def keep_events(nums):
+    new_list = []
+    for num in nums:
+        if num % 2 == 0:
+            new_list.append(num)
+    return new_list
+
+
+print(keep_events([2,3,6,4,0,8,7,9,10,11,13,15,17]))
+
+print("------------------------------")
+def keepEvent(numbers):
+    new_seq = filter(lambda numbers:  num % 2 ==0, numbers)
+    return  list(new_seq)
+print(keep_events([2,3,6,4,0,8,7,9,10,11,13,15,17]))
+
+print("------------------------------")
+lst_check = ['plums', 'watermelon', 'kiwi', 'strawberries', 'blueberries', 'peaches', 'apples', 'mangos', 'papaya']
+
+filter_testing = filter(lambda word: "w" in word, lst_check)
+filtered_words = list(filter_testing)
+
+print(filtered_words)
+print("------------------------------")
+
+lst = ["witch", "halloween", "pumpkin", "cat", "candy", "wagon", "moon"]
+
+lst2 = filter(lambda word: "o" in word, lst)
+filtered_lists = list(lst2)
+print(filtered_lists)
+
+```
+The first two code snippets are attempting to accomplish the same task of filtering even numbers from a list of integers.
+
+The first code snippet defines a function keep_events that takes a list of integers nums and creates an empty list new_list. It then iterates through each element num in nums and checks if it is even by using the modulo operator % to check if the remainder is zero when divided by 2. If it is even, num is appended to new_list. Finally, new_list is returned.
+
+The second code snippet defines a function keepEvent that takes a list of integers numbers and uses the filter function to return a new sequence that contains only the even numbers in numbers. It does this by defining a lambda function that takes an argument num and checks if it is even, and passing this lambda function as the first argument to the filter function along with numbers. The filter function returns an iterator object that can be converted to a list using the list function, and this list is returned by keepEvent.
+
+The third code snippet defines a list of strings lst_check and uses the filter function to return a new sequence that contains only the strings in lst_check that contain the character "w". It does this by defining a lambda function that takes an argument word and checks if it contains the character "w", and passing this lambda function as the first argument to the filter function along with lst_check. The filter function returns an iterator object that can be converted to a list using the list function, and this list is printed.
+
+The fourth code snippet defines a list of strings lst and uses the filter function to return a new sequence that contains only the strings in lst that contain the character "o". It does this by defining a lambda function that takes an argument word and checks if it contains the character "o", and passing this lambda function as the first argument to the filter function along with lst. The filter function returns an iterator object that can be converted to a list using the list function, and this list is printed
+
+### maps.py
+**Code**
+```python
+def multiplication(a_list):
+    new_list = []
+    for any_value in a_list:
+        new_element = 2 * any_value
+        new_list.append(new_element)
+    return  new_list
+
+nums = [4,5,6,1,8]
+print(nums)
+print("Double the new list of number by  2:")
+nums = multiplication(nums)
+print(nums)
+
+def triple(value):
+    return 3*value
+
+def tripleStuff(a_list):
+    new_seq = map(triple, a_list)
+    return list(new_seq)
+
+def quadrupleStuff(a_list):
+    new_seq = map(lambda value: 4*value, a_list)
+    return list(new_seq)
+
+things = [2, 5, 9]
+things3 = tripleStuff(things)
+print(things3)
+things4 = quadrupleStuff(things)
+
+things = [2, 5, 9]
+
+things4 = map((lambda value: 4*value), things)
+print(list(things4))
+
+# or all on one line
+print(list(map((lambda value: 5*value), [1, 2, 3])))
+lst = [["hi", "bye"], "hello", "goodbye", [9, 2], 4]
+
+greeting_doubled = list(map(lambda x: x*2, lst))
+print(greeting_doubled)
+
+abbrevs = ["usa", "esp", "chn", "jpn", "mex", "can", "rus", "rsa", "jam"]
+
+def transformer(st):
+    return st.upper()
+
+abbrevs_upper = map(transformer, abbrevs)
+abbrevs_upper = map(lambda st: st.upper(), abbrevs)
+print(list(abbrevs_upper))
+
+```
+
+The code above demonstrates the use of the map function to apply a function to each element in a list and return a new list of the results.
+
+The multiplication function takes a list a_list, creates a new empty list new_list, and iterates through each element in a_list. For each element, it multiplies it by 2 and appends the result to new_list. Finally, it returns new_list.
+
+The triple function takes a single value and returns its triple (i.e., multiplies it by 3).
+
+The tripleStuff function takes a list a_list and uses the map function to apply the triple function to each element in a_list. It returns a new list of the results.
+
+The quadrupleStuff function is similar to tripleStuff, but it uses a lambda function instead of a named function to multiply each element by 4.
+
+The code also demonstrates some examples of using map with lambda functions. For example, the code things4 = map((lambda value: 4*value), things) creates a new list things4 that contains each element of things multiplied by 4. Similarly, the code abbrevs_upper = map(lambda st: st.upper(), abbrevs) creates a new list abbrevs_upper that contains each element of abbrevs converted to uppercase using a lambda function.
+
+The code also demonstrates some more complex examples of using map. For example, the code greeting_doubled = list(map(lambda x: x*2, lst)) creates a new list greeting_doubled that contains each element of lst repeated twice. The code abbrevs_upper = map(transformer, abbrevs) creates a new list abbrevs_upper that contains each element of abbrevs converted to uppercase using a named function transformer.
