@@ -4000,3 +4000,97 @@ The quadrupleStuff function is similar to tripleStuff, but it uses a lambda func
 The code also demonstrates some examples of using map with lambda functions. For example, the code things4 = map((lambda value: 4*value), things) creates a new list things4 that contains each element of things multiplied by 4. Similarly, the code abbrevs_upper = map(lambda st: st.upper(), abbrevs) creates a new list abbrevs_upper that contains each element of abbrevs converted to uppercase using a lambda function.
 
 The code also demonstrates some more complex examples of using map. For example, the code greeting_doubled = list(map(lambda x: x*2, lst)) creates a new list greeting_doubled that contains each element of lst repeated twice. The code abbrevs_upper = map(transformer, abbrevs) creates a new list abbrevs_upper that contains each element of abbrevs converted to uppercase using a named function transformer.
+
+---
+
+###  GET Request - to Search for images on Google
+```python
+import requests
+u = {'q': 'hardcleats and softcleats', 'tbm':'isch'}
+out = requests.get("https://www.google.com/search", params=u)
+print(out.url)
+print(out.text)
+
+```
+This code sends a GET request to Google Images with the query parameters "q=hardcleats and softcleats" and "tbm=isch", and then prints out the URL of the request and the text content of the response.
+
+The requests library is used to send HTTP requests to websites. In this case, it is used to send a GET request to the Google Images search page with the specified query parameters.
+
+The params parameter in the get method is used to specify the query parameters to send along with the request. In this case, the 'q' parameter specifies the search query, and the 'tbm' parameter specifies the type of search to perform (in this case, an image search).
+
+The out.url statement is used to print out the URL of the request, which is the Google Images search page with the specified query parameters.
+
+The out.text statement is used to print out the text content of the response, which is the HTML code of the search results page returned by Google Images. This can be parsed using tools like BeautifulSoup to extract the images or other information from the page.
+
+---
+### instaLoader.py
+**Code**
+```python
+import instaloader
+import pandas
+import re
+# Creating an instance of the Instaloader class
+bot = instaloader.Instaloader()
+# Loading the profile from an Instagram handle
+profile = instaloader.Profile.from_username(bot.context, 'mngugi7')
+print(profile)
+
+print('----------------------------------------------------------')
+# Creating an instance of the Instaloader class
+bot = instaloader.Instaloader()
+
+# Loading a profile from an Instagram handle
+profile = instaloader.Profile.from_username(bot.context, 'mngugi7')
+print("Username: ", profile.username)
+print("User ID: ", profile.userid)
+print("Number of Posts: ", profile.mediacount)
+print("Followers Count: ", profile.followers)
+print("Following Count: ", profile.followees)
+print("Bio: ", profile.biography)
+print("External URL: ", profile.external_url)
+
+print('---------------------------------------------------------')
+# Creating an instance of Instaloader class
+bot = instaloader.Instaloader()
+profile = instaloader.Profile.from_username(bot.context, "mngugi7")
+print("Username: ", profile.username)
+print("Bio: ", profile.biography)
+emails = re.findall(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b", profile.biography)
+print("Emails extracted from the bio:")
+print(emails)
+
+bot = instaloader.Instaloader()
+bot.login(user="Your_username", passwd="Your_password")
+
+# Loading a profile from an Instagram handle
+profile = instaloader.Profile.from_username(bot.context, 'Your_target_account_insta_handle')
+
+# Retrieving the usernames of all followers
+followers = [follower.username for follower in profile.get_followers()]
+
+# Converting the data to a DataFrame
+followers_df = pd.DataFrame(followers)
+
+# Storing the results in a CSV file
+followers_df.to_csv('followers.csv', index=False)
+
+# Retrieving the usernames of all followings
+followings = [followee.username for followee in profile.get_followees()]
+
+# Converting the data to a DataFrame
+followings_df = pd.DataFrame(followings)
+
+# Storing the results in a CSV file
+followings_df.to_csv('followings.csv', index=False)
+
+```
+
+This Python code uses the Instaloader library to retrieve information from an Instagram profile and extract emails from the profile's bio. It also logs into an Instagram account, retrieves the usernames of followers and followees of a target Instagram profile, and stores the results in CSV files.
+
+The first part of the code loads the profile from an Instagram handle and prints some basic information about the profile, such as the username, user ID, number of posts, followers count, following count, bio, and external URL.
+
+The second part of the code extracts emails from the profile's bio using a regular expression.
+
+The third part of the code logs into an Instagram account, loads a target Instagram profile, retrieves the usernames of its followers and followees, converts the data to DataFrames, and stores the results in CSV files named "followers.csv" and "followings.csv", respectively.
+
+To use this code, you will need to have the Instaloader library installed and replace the placeholders "Your_username" and "Your_password" with your own Instagram account credentials and "Your_target_account_insta_handle" with the handle of the Instagram profile you want to retrieve follower and followee data from.
