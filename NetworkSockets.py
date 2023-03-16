@@ -1,9 +1,9 @@
 import socket
 
 lasocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-lasocket.connect(('data.pr4e.org', 80))
+lasocket.connect(('<xxxxx.com>', 80))
 
-cmd = 'GET http://data.pr4e.org/intro-short.txt HTTP/1.0\r\n\r\n'.encode()
+cmd = 'GET http://<xxxxx.com> HTTP/1.0\r\n\r\n'.encode()
 lasocket.send(cmd)
 
 while True:
