@@ -4094,3 +4094,138 @@ The second part of the code extracts emails from the profile's bio using a regul
 The third part of the code logs into an Instagram account, loads a target Instagram profile, retrieves the usernames of its followers and followees, converts the data to DataFrames, and stores the results in CSV files named "followers.csv" and "followings.csv", respectively.
 
 To use this code, you will need to have the Instaloader library installed and replace the placeholders "Your_username" and "Your_password" with your own Instagram account credentials and "Your_target_account_insta_handle" with the handle of the Instagram profile you want to retrieve follower and followee data from.
+
+
+---
+
+### NetworkSockets.py
+**Code**
+
+```python
+import socket
+
+lasocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+lasocket.connect(('<xxxxx.com>', 80))
+
+cmd = 'GET http://<xxxxx.com> HTTP/1.0\r\n\r\n'.encode()
+lasocket.send(cmd)
+
+while True:
+    data = lasocket.recv(512)
+    if (len(data) < 1 ):
+        break
+    print(data.decode(), end='')
+
+lasocket.close()
+
+```
+
+This is a Python code snippet that demonstrates how to make a GET request to a web server using the sockets library in Python. Let's go through each line of the code:
+import socket: This line imports the Python sockets library, which provides a low-level interface for network communication.
+lasocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM): This line creates a new socket object using the socket.socket() method. The AF_INET parameter specifies that we want to use IPv4, and the SOCK_STREAM parameter specifies that we want to use the TCP protocol.
+lasocket.connect(('<xxxxx.com>', 80)): This line connects to the web server at the specified IP address and port number. In this case, we are connecting to port 80, which is the default port for HTTP traffic.
+cmd = 'GET http://<xxxxx.com> HTTP/1.0\r\n\r\n'.encode(): This line creates a GET request message that includes the URL of the web page we want to retrieve. The .encode() method is used to convert the string to bytes, which is required for sending the message over the network.
+lasocket.send(cmd): This line sends the GET request message to the web server.
+while True:: This line starts a loop that will continue until the break statement is executed.
+data = lasocket.recv(512): This line reads up to 512 bytes of data from the web server.
+if (len(data) < 1 ):: This line checks if no data was received, which indicates the end of the response message.
+break: This line exits the loop if no data was received.
+print(data.decode(), end=''): This line prints the received data as a string.
+lasocket.close(): This line closes the connection to the web server.
+
+Overall, this code connects to a web server, sends a GET request message, reads and prints the response message until the end of the message is reached, and then closes the connection.
+
+---
+
+### retrieveWebPage.py
+**Code**
+```python
+import urllib.request, urllib.parse, urllib.error
+
+fhand = urllib.request.urlopen('http://<xxxxxx.com>/ffff.txt')
+
+counts = dict()
+for line in fhand:
+
+    print(line.decode().strip())
+    words = line.decode().split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+print(counts)
+
+```
+This Python code snippet reads a text file from a web server using the urllib library and counts the occurrences of each word in the file. Let's go through each line of the code:
+
+import urllib.request, urllib.parse, urllib.error: This line imports the necessary modules from the urllib library, which provides a set of high-level interfaces for working with URLs.
+
+fhand = urllib.request.urlopen('http://<xxxxxx.com>/ffff.txt'): This line opens a connection to the specified URL using the urllib.request.urlopen() method and returns a file handle object that can be used to read the contents of the file.
+
+counts = dict(): This line creates an empty dictionary called counts, which will be used to store the word counts.
+for line in fhand:: This line starts a loop that iterates over each line in the file.
+print(line.decode().strip()): This line prints each line of the file to the console, after decoding the bytes into a string and stripping any leading or trailing whitespace.
+words = line.decode().split(): This line splits the line into a list of words using the split() method.
+for word in words:: This line starts a loop that iterates over each word in the list.
+counts[word] = counts.get(word, 0) + 1: This line updates the count for the current word by adding 1 to its current count in the counts dictionary. The get() method is used to retrieve the current count for the word, or 0 if it doesn't exist yet.
+print(counts): This line prints the final word count dictionary to the console.
+Overall, this code retrieves a text file from a web server, reads the contents of the file, counts the occurrences of each word, and prints the word counts to the console.
+
+---
+
+### XmlPy.py
+**Code**
+```python
+import xml.etree.ElementTree as ET
+
+data = '''<person>
+<name>Maradonna</name>
+<phone type="intl">
++254303030
+</phone>
+<email hide="yes"></email>
+</person>'''
+
+tree = ET.fromstring(data)
+
+print('Name:', tree.find('name').text)
+print('Attr:', tree.find('email').get('hide'))
+print('--------------------------------------')
+
+input = ''' <stuff>
+<users>
+<user x = "2">
+<id>001</id>
+<name>Messi</name>
+</user>
+<user x = "7">
+<id>0011</id>
+<name>Wanchop</name>
+</user>
+</users>
+</stuff>
+'''
+
+stuff = ET.fromstring(input)
+lst = stuff.findall('users/user')
+print('User Count:', len(lst))
+for item in lst:
+    print('Name', item.find('name').text)
+    print('id', item.find('id').text)
+    print('Attribute', item.get('x'))
+
+```
+This Python code snippet reads a text file from a web server using the urllib library and counts the occurrences of each word in the file. Let's go through each line of the code:
+
+import urllib.request, urllib.parse, urllib.error: This line imports the necessary modules from the urllib library, which provides a set of high-level interfaces for working with URLs.
+
+fhand = urllib.request.urlopen('http://<xxxxxx.com>/ffff.txt'): This line opens a connection to the specified URL using the urllib.request.urlopen() method and returns a file handle object that can be used to read the contents of the file.
+
+counts = dict(): This line creates an empty dictionary called counts, which will be used to store the word counts.
+for line in fhand:: This line starts a loop that iterates over each line in the file.
+
+print(line.decode().strip()): This line prints each line of the file to the console, after decoding the bytes into a string and stripping any leading or trailing whitespace.
+words = line.decode().split(): This line splits the line into a list of words using the split() method.
+for word in words:: This line starts a loop that iterates over each word in the list.
+counts[word] = counts.get(word, 0) + 1: This line updates the count for the current word by adding 1 to its current count in the counts dictionary. The get() method is used to retrieve the current count for the word, or 0 if it doesn't exist yet.
+print(counts): This line prints the final word count dictionary to the console.
+
+Overall, this code retrieves a text file from a web server, reads the contents of the file, counts the occurrences of each word, and prints the word counts to the console.
