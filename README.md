@@ -4229,3 +4229,77 @@ counts[word] = counts.get(word, 0) + 1: This line updates the count for the curr
 print(counts): This line prints the final word count dictionary to the console.
 
 Overall, this code retrieves a text file from a web server, reads the contents of the file, counts the occurrences of each word, and prints the word counts to the console.
+
+---
+
+### question1.py
+**Code**
+
+```python
+class Compare:
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+
+    def __bool__(self):
+        return  self.a is self.b
+
+c1 = Compare([1,2,3], [1,2,3])
+
+print(c1.__bool__())
+
+```
+The output of the code is False.
+
+The class Compare takes two arguments a and b in the constructor and assigns them to the instance variables self.a and self.b.
+
+The __bool__ method is defined to return True if self.a is the same object as self.b, and False otherwise.
+
+In the given code, an instance c1 of the Compare class is created with arguments [1,2,3] and [1,2,3]. These are two different lists with the same contents, so self.a is self.b returns False. Therefore, when c1.__bool__() is called, it returns False.
+
+Note that it is generally recommended to use the == operator to compare the values of objects, rather than the is operator, which checks if two objects are the same instance. In this case, using == instead of is would make the comparison return True, since the two lists have the same contents.
+
+---
+
+### question2.py
+**Code**
+
+```python
+def tricky_list(lst):
+    return lst[:-1] and lst[:-2] \
+        if len(lst[1]) == len(lst[-1])\
+        else lst[1:]
+
+names = ["Ben", "Ken", "Len"]
+print(tricky_list(names))
+
+```
+
+The output of the code is ["Ken"].
+
+The tricky_list function takes a list lst as input. It first checks if the length of the second element of lst is equal to the length of the last element of lst. If this condition is true, it returns the slice of lst from the beginning up to the second-to-last element, skipping the last two elements. Otherwise, it returns a slice of lst from the second element to the end.
+
+In the given code, the names list has three elements: "Ben", "Ken", and "Len". The length of the second element ("Ken") is 3, which is equal to the length of the last element ("Len"). Therefore, the function returns lst[:-1] and lst[:-2], which is equivalent to lst[:-2], resulting in a list with only the second element: ["Ken"].
+
+Note that the use of the and operator in the return statement is a shorthand way of checking if the left-hand side is not an empty list before returning the right-hand side. If the left-hand side is an empty list, the expression evaluates to the empty list and short-circuits, not evaluating the right-hand side at all. If the left-hand side is not an empty list, the expression evaluates to the right-hand side. In this case, lst[:-1] and lst[:-2] are both non-empty lists, so the expression evaluates to lst[:-2].
+
+---
+
+### questio4.py
+**Code**
+
+```python
+for i in range(1, 4):
+    for j in range(1, 4):
+        k = i*j
+        print(k)
+```
+The code uses two nested for loops to iterate over the values 1, 2, and 3 for both i and j. For each pair of values, it multiplies i and j together and assigns the result to k. It then prints the value of k.
+
+The first iteration of the outer loop sets i to 1. The inner loop then iterates over the values 1, 2, and 3 for j. For each value of j, the product i*j is computed and printed. This results in the values 1, 2, and 3 being printed in turn.
+
+The second iteration of the outer loop sets i to 2. The inner loop then iterates over the values 1, 2, and 3 for j again. For each value of j, the product i*j is computed and printed. This results in the values 2, 4, and 6 being printed in turn.
+
+The third and final iteration of the outer loop sets i to 3. The inner loop then iterates over the values 1, 2, and 3 for j yet again. For each value of j, the product i*j is computed and printed. This results in the values 3, 6, and 9 being printed in turn.
+
+Therefore, the output of the code is as shown at the beginning.
