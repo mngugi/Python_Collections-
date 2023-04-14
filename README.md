@@ -4303,3 +4303,30 @@ The second iteration of the outer loop sets i to 2. The inner loop then iterates
 The third and final iteration of the outer loop sets i to 3. The inner loop then iterates over the values 1, 2, and 3 for j yet again. For each value of j, the product i*j is computed and printed. This results in the values 3, 6, and 9 being printed in turn.
 
 Therefore, the output of the code is as shown at the beginning.
+
+---
+
+
+### passwordGen.py
+```python
+
+import  random
+
+lower = "abcdefghijklmnopqrst"
+UPPER = "ABCDEFGHIJKLMNOPQRST"
+numbers = "0123456789"
+symbols = "[]{}()@#$%&,.-_*"
+
+all = lower+UPPER+numbers+symbols
+
+length = 16
+
+password = "".join(r
+
+```
+This is a Python code for generating a random password. The password consists of lowercase and uppercase letters, numbers, and symbols. The length of the password is set to 16. When you run this code, it will generate a new password every time you execute it. The password will be a string of 16 characters randomly selected from the four different character sets.
+
+Note that the 'all' variable is a string concatenation of all the character sets that the password can be composed of. The 'length' variable defines the length of the password. The 'password' variable is created by joining a random sample of 'length' characters from the 'all' variable using the join() method. Finally, the password is printed to the console.
+
+It is important to note that while this code can generate a random password, it may not necessarily be a strong password. A strong password should ideally have a combination of uppercase and lowercase letters, numbers, and symbols, and should be at least 12 characters long. Additionally, the password should not be based on easily guessable information, such as the user's name or birthdate.
+
