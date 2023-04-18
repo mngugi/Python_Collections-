@@ -819,6 +819,35 @@ False
 False
 ```
 
+---
+### queston5.py
+**Code**
+
+```python
+x = 5
+y = 10
+
+x= (x > 10 or y > 5)
+y = not (x > 10 or y > 5)
+z = (x and y)
+
+print(z.__or__(y))
+
+```
+
+Here's how the code works step by step:
+
+    x is assigned the value 5, and y is assigned the value 10.
+    The expression x > 10 or y > 5 evaluates to False or True, which is True because at least one of the conditions is true (the second one).
+    x is then assigned the value True because of the previous expression.
+    The expression not (x > 10 or y > 5) is equivalent to not True, which evaluates to False.
+    y is assigned the value False because of the previous expression.
+    z is assigned the value False because x is True and y is False.
+    z.__or__(y) is equivalent to False or False, which evaluates to False.
+
+
+---
+
 
 ## in.py
 
