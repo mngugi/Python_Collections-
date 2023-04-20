@@ -4359,3 +4359,18 @@ Note that the 'all' variable is a string concatenation of all the character sets
 
 It is important to note that while this code can generate a random password, it may not necessarily be a strong password. A strong password should ideally have a combination of uppercase and lowercase letters, numbers, and symbols, and should be at least 12 characters long. Additionally, the password should not be based on easily guessable information, such as the user's name or birthdate.
 
+---
+
+### question6.py
+**Code**
+```python
+a = [7]
+b = [12]
+a = a*2
+
+print ((a == b.extend(b)))
+
+```
+The expression a == b.extend(b) will return False because the extend() method does not return anything. When you call a = a*2, you are creating a new list that is twice the size of the original list. When you call b.extend(b), you are appending the contents of the list to itself. This does not change the size of the list, so the two lists are not equal.
+
+---
