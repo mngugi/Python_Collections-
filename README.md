@@ -4374,3 +4374,29 @@ print ((a == b.extend(b)))
 The expression a == b.extend(b) will return False because the extend() method does not return anything. When you call a = a*2, you are creating a new list that is twice the size of the original list. When you call b.extend(b), you are appending the contents of the list to itself. This does not change the size of the list, so the two lists are not equal.
 
 ---
+### question7.py
+```python
+def numbers():
+    yield 1
+    yield 2
+
+if __name__ == "__main__":
+    x = numbers()
+    next(x)
+    next(x)
+    next(x)
+
+```
+In the above code, the numbers() function is a generator function. It yields the values 1 and 2, one at a time. The if __name__ == "__main__" guard clause ensures that the code inside it is only executed when the script is run as the main script.
+
+When the numbers() function is called, it returns a generator object. The next() function is used to iterate over the generator object. The first call to next() yields the value 1. The second call to next() yields the value 2. The third call to next() raises a StopIteration exception because the generator object has been exhausted.
+
+```python
+**output of the code:**
+1
+2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+
+```
