@@ -4371,6 +4371,7 @@ a = a*2
 print ((a == b.extend(b)))
 
 ```
+
 The expression a == b.extend(b) will return False because the extend() method does not return anything. When you call a = a*2, you are creating a new list that is twice the size of the original list. When you call b.extend(b), you are appending the contents of the list to itself. This does not change the size of the list, so the two lists are not equal.
 
 ---
@@ -4400,3 +4401,30 @@ Traceback (most recent call last):
 StopIteration
 
 ```
+
+---
+
+### question8.py
+
+**Code**
+
+```python
+def function(*args, b=2):
+    results = (all(args),b)
+    return  sum(results) == b
+
+print(function(7,9,8,0,12, b=8))
+
+```
+
+The function function(*args, b=2) takes any number of positional arguments as *args and a default value of b=2.
+
+In the function body, the variables results is assigned the tuple (all(args), b). Here, the built-in function all() returns True if all elements in the iterable args are true, and False otherwise.
+
+The sum() function is used to add up the values in the tuple (all(args), b), which in this case will be either 0 or 1 plus the value of b.
+
+Finally, the expression sum(results) == b checks if the sum of the tuple is equal to the value of b. The function returns True if this condition is met, and False otherwise.
+
+When the function is called with the arguments function(7,9,8,0,12, b=8), it will return True because all(args) returns True since all the positional arguments are truthy values, and the sum of the tuple (1, 8) is equal to b=8.
+
+Therefore, the output of the code will be True.
