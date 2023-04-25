@@ -4428,3 +4428,31 @@ Finally, the expression sum(results) == b checks if the sum of the tuple is equa
 When the function is called with the arguments function(7,9,8,0,12, b=8), it will return True because all(args) returns True since all the positional arguments are truthy values, and the sum of the tuple (1, 8) is equal to b=8.
 
 Therefore, the output of the code will be True.
+
+---
+
+### questions9.py
+**Code**
+```python
+def function(n):
+    result = []
+    for i in  range(n):
+        result.append(lambda:i*2)
+    return result
+
+
+func = function(3)
+
+for f in func:
+    print(f())
+    break
+```
+The code defines a function function that takes an integer n as input and returns a list of n lambda functions. Each lambda function, when called, returns the value of its index in the list multiplied by 2.
+
+When the code calls function(3), it creates a list with 3 lambda functions that return 0, 1, and 2 respectively, each multiplied by 2.
+
+The for loop then iterates over each function in the list and calls it using f(). Since each function returns its index multiplied by 2, the output of the loop will be:
+
+The break statement is unnecessary because it causes the loop to terminate after the first iteration, but since the loop only has one iteration in this case, it doesn't affect the output.
+
+---
