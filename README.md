@@ -4456,3 +4456,27 @@ The for loop then iterates over each function in the list and calls it using f()
 The break statement is unnecessary because it causes the loop to terminate after the first iteration, but since the loop only has one iteration in this case, it doesn't affect the output.
 
 ---
+### question10.py
+**Code**
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0,10,100)
+y = np.sin(x)
+
+plt.plot(x,y)
+plt.xlabel('x')
+plt.ylabel('sin(x)')
+plt.title('Sine Wave')
+plt.show()
+
+```
+The python code uses the NumPy library to create a one-dimensional array of 100 equally spaced values between 0 and 10, and then applies the sine function to each value of the array to obtain the corresponding y values.
+
+Next, the code uses the Matplotlib library to create a line plot of the x and y values, and sets the labels for the x and y axes and the title of the plot.
+
+Finally, the plt.show() function displays the plot.
+
+Overall, this code creates a simple plot of the sine wave function.
