@@ -4480,3 +4480,31 @@ Next, the code uses the Matplotlib library to create a line plot of the x and y 
 Finally, the plt.show() function displays the plot.
 
 Overall, this code creates a simple plot of the sine wave function.
+
+---
+
+### question11.py
+```python
+import  numpy as np
+import  pandas as pd
+
+df = pd.Series(np.random.randn(200),
+               index=pd.date_range("1/1/2000", periods=200))
+
+df.plot(kind="bar")
+
+```
+The code snippet you provided generates a Pandas Series object containing 200 random numbers from a normal distribution, with dates as indices, and then creates a bar plot of the data.
+
+However, since bar plots are typically used to show the distribution of categorical data, it may not be the most appropriate plot type for a continuous variable like the one generated here.
+
+If you want to visualize the distribution of the random numbers in the Series, you could use a histogram instead:
+
+`df.hist()`
+This will create a histogram of the data, with the x-axis representing the range of values and the y-axis representing the frequency of those values.
+
+Alternatively, if you want to see how the values change over time, you could use a line plot:
+
+`df.plot()`
+This will create a line plot of the data, with the x-axis representing the dates and the y-axis representing the values.
+
