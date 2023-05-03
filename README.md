@@ -4508,3 +4508,54 @@ Alternatively, if you want to see how the values change over time, you could use
 `df.plot()`
 This will create a line plot of the data, with the x-axis representing the dates and the y-axis representing the values.
 
+===
+
+### question12.py
+**Code:**
+```python
+from string import Template
+
+def strange_func(n):
+    template = Template('$x is not the $y letter')
+    result = []
+
+    for i in range(n):
+        result.append(lambda x: template.substitute(x=x, y=i))
+    return result
+
+funcs = strange_func(4)
+
+for f in funcs:
+    print(f('A'))
+
+
+```
+ strange_func creates a list of lambda functions that all reference the same template object. When the lambdas are executed in the loop, they use the current value of i, which is 3 at the end of the loop, for the $y placeholder in the template. So, all of the lambdas in the list will return the same string where 3 is substituted for $y and A is substituted for $x.
+
+To avoid this issue, you could use a closure to capture the current value of i for each lambda, like this:
+
+
+```python
+def strange_func(n):
+    result = []
+
+    for i in range(n):
+        template = Template('$x is not the $y letter')
+        result.append((lambda x, y: template.substitute(x=x, y=y))(i))
+
+    return result
+
+funcs = strange_func(4)
+
+for f in funcs:
+    print(f('A'))
+```
+
+This should output:
+
+`0 is not the A letter`
+`1 is not the A letter`
+`2 is not the A letter`
+`3 is not the A letter`
+In this version of the code, each lambda creates its own template object and passes the current value of i as a parameter to the lambda. This way, the value of i is captured by the lambda at the time it is created and doesn't change later on.
+
