@@ -4508,7 +4508,7 @@ Alternatively, if you want to see how the values change over time, you could use
 `df.plot()`
 This will create a line plot of the data, with the x-axis representing the dates and the y-axis representing the values.
 
-===
+---
 
 ### question12.py
 **Code:**
