@@ -4508,7 +4508,7 @@ Alternatively, if you want to see how the values change over time, you could use
 `df.plot()`
 This will create a line plot of the data, with the x-axis representing the dates and the y-axis representing the values.
 
----
+===
 
 ### question12.py
 **Code:**
@@ -4559,3 +4559,30 @@ This should output:
 `3 is not the A letter`
 In this version of the code, each lambda creates its own template object and passes the current value of i as a parameter to the lambda. This way, the value of i is captured by the lambda at the time it is created and doesn't change later on.
 
+---
+
+### Question13.py
+**Code:**
+```python
+
+i = lambda i: (i, print('x'))
+j = lambda i: i
+
+w = lambda n: (n(0), n(1))
+
+result = f"{(j(1) in i(1))}, {(w(i) == w(j))}"
+print(result)
+
+```
+`Code output`
+`False, True`
+
+The first part of the output, False, is because the value 1 is not in the tuple returned by i(1). The second part of the output, True, is because the functions i and j return the same value for all inputs.
+
+Explanation of the code:
+
+i = lambda i: (i, print('x')) defines a lambda function called i that takes an integer i as input and returns a tuple containing i and the string 'x'. The print() statement is executed immediately when the function is called.
+j = lambda i: i defines a lambda function called j that takes an integer i as input and returns i.
+w = lambda n: (n(0), n(1)) defines a lambda function called w that takes a function n as input and returns a tuple containing the values returned by calling n with the arguments 0 and 1.
+result = f"{(j(1) in i(1))}, {(w(i) == w(j))}" defines a string result that contains the output of the expressions (j(1) in i(1)) and (w(i) == w(j)).
+print(result) prints the value of result to the console.
