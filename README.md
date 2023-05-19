@@ -4586,3 +4586,25 @@ j = lambda i: i defines a lambda function called j that takes an integer i as in
 w = lambda n: (n(0), n(1)) defines a lambda function called w that takes a function n as input and returns a tuple containing the values returned by calling n with the arguments 0 and 1.
 result = f"{(j(1) in i(1))}, {(w(i) == w(j))}" defines a string result that contains the output of the expressions (j(1) in i(1)) and (w(i) == w(j)).
 print(result) prints the value of result to the console.
+
+---
+###question14.py
+**Code**
+```python
+import matplotlib.pyplot as plt
+
+labels = ('python','katolin', 'C++', 'C', 'java')
+index = (1,2,3,4,5)
+
+sizes = [45,5,15,20,30]
+
+plt.ylabel('Usage')
+plt.xlabel('Programming Language')
+
+plt.bar(index, sizes)
+plt.xticks(index, labels)
+plt.show()
+
+```
+This code will create a bar graph showing the usage of different programming languages. The x-axis will show the names of the programming languages, and the y-axis will show the usage of each language. The bars will be colored blue.
+As you can see, Python is the most popular programming language, followed by Java, C++, C, and Kotlin.
