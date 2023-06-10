@@ -4588,7 +4588,7 @@ result = f"{(j(1) in i(1))}, {(w(i) == w(j))}" defines a string result that cont
 print(result) prints the value of result to the console.
 
 ---
-###question14.py
+### question14.py
 **Code**
 ```python
 import matplotlib.pyplot as plt
@@ -4608,3 +4608,38 @@ plt.show()
 ```
 This code will create a bar graph showing the usage of different programming languages. The x-axis will show the names of the programming languages, and the y-axis will show the usage of each language. The bars will be colored blue.
 As you can see, Python is the most popular programming language, followed by Java, C++, C, and Kotlin.
+
+---
+
+
+### Question15.py
+
+
+```python
+
+import heapq
+
+results = [65, 59, 89, 89.9999999, 89.899977, 90]
+
+# Finding the 3 largest numbers
+largest_numbers = heapq.nlargest(3, results)
+print('N largest numbers:', largest_numbers)
+
+# Finding the 3 smallest numbers
+smallest_numbers = heapq.nsmallest(3, results)
+print('N smallest numbers:', smallest_numbers)
+
+Output:
+
+
+N largest numbers: [90, 89.9999999, 89.899977]
+N smallest numbers: [59, 65, 89]
+
+```
+This code, heapq.nlargest(n, iterable) returns a list containing the n largest elements from the iterable (in this case, the results list). Similarly, heapq.nsmallest(n, iterable) returns a list containing the n smallest elements from the iterable.
+
+When you run the code, it will print the n largest numbers and the n smallest numbers from the results list. In this case, it will display the 3 largest and 3 smallest numbers.
+
+Note that if there are multiple numbers with the same value as the n-th largest or smallest element, the function will include them in the result. For example, in this case, 89.9999999 and 89.899977 are both considered as the third largest numbers because they have the same value, so both are included in the result.
+
+---
