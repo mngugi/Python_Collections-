@@ -4588,7 +4588,7 @@ result = f"{(j(1) in i(1))}, {(w(i) == w(j))}" defines a string result that cont
 print(result) prints the value of result to the console.
 
 ---
-###question14.py
+### question14.py
 **Code**
 ```python
 import matplotlib.pyplot as plt
@@ -4608,3 +4608,144 @@ plt.show()
 ```
 This code will create a bar graph showing the usage of different programming languages. The x-axis will show the names of the programming languages, and the y-axis will show the usage of each language. The bars will be colored blue.
 As you can see, Python is the most popular programming language, followed by Java, C++, C, and Kotlin.
+
+---
+
+
+### Question15.py
+
+
+```python
+
+import heapq
+
+results = [65, 59, 89, 89.9999999, 89.899977, 90]
+
+# Finding the 3 largest numbers
+largest_numbers = heapq.nlargest(3, results)
+print('N largest numbers:', largest_numbers)
+
+# Finding the 3 smallest numbers
+smallest_numbers = heapq.nsmallest(3, results)
+print('N smallest numbers:', smallest_numbers)
+
+Output:
+
+
+N largest numbers: [90, 89.9999999, 89.899977]
+N smallest numbers: [59, 65, 89]
+
+```
+This code, heapq.nlargest(n, iterable) returns a list containing the n largest elements from the iterable (in this case, the results list). Similarly, heapq.nsmallest(n, iterable) returns a list containing the n smallest elements from the iterable.
+
+When you run the code, it will print the n largest numbers and the n smallest numbers from the results list. In this case, it will display the 3 largest and 3 smallest numbers.
+
+Note that if there are multiple numbers with the same value as the n-th largest or smallest element, the function will include them in the result. For example, in this case, 89.9999999 and 89.899977 are both considered as the third largest numbers because they have the same value, so both are included in the result.
+
+---
+
+### Dervatives.ipynb
+**Code**
+
+```python
+import matplotlib.pyplot as plt
+import torch
+x = torch.tensor(3.0, requires_grad = True)
+print("creating tensor x: ", x)
+
+y = 3 * x ** 2
+print("Result of the equation is: ", y)
+y.backward()
+print("Dervative of the equation at x = 3 is: ", x.grad)    
+print('data attribute of the tensor:',x.data)
+print('grad attribute of the tensor::',x.grad)
+print('grad_fn attribute of the tensor::',x.grad_fn)
+print("is_leaf attribute of the tensor::",x.is_leaf)
+
+print("requires_grad attribute of the tensor::",x.requires_grad)
+u = torch.tensor(3., requires_grad=True)
+v = torch.tensor(4., requires_grad=True)
+
+f = u**3 + v**2 + 4*u*v
+
+print(u)
+print(v)
+print(f)
+
+f.backward()
+print("Partial derivative with respect to u: ", u.grad)
+print("Partial derivative with respect to v: ", v.grad)
+# compute the derivative of the function with multiple values
+x = torch.linspace(-20, 20, 20, requires_grad = True)
+Y = x ** 2
+y = torch.sum(Y)
+y.backward()
+
+# ploting the function and derivative
+function_line, = plt.plot(x.detach().numpy(), Y.detach().numpy(), label = 'Function')
+function_line.set_color("red")
+derivative_line, = plt.plot(x.detach().numpy(), x.grad.detach().numpy(), label = 'Derivative')
+derivative_line.set_color("green")
+plt.xlabel('x')
+plt.legend()
+plt.show()
+
+```
+Import the required libraries:
+
+`import matplotlib.pyplot as plt`
+`import torch`
+Here, we import the matplotlib.pyplot module to visualize the function and derivative, and the torch module for tensor operations and automatic differentiation.
+
+Define a tensor x with the value 3.0 and requires_grad set to True:
+
+`x = torch.tensor(3.0, requires_grad=True)`
+This creates a scalar tensor x with the value 3.0. By setting requires_grad to True, we enable automatic differentiation to compute gradients with respect to x.
+
+Print the value of x:
+
+
+`print("creating tensor x:", x)`
+This statement prints the value of x to the console.
+
+Define a tensor y that represents an equation involving x:
+
+`y = 3 * x ** 2`
+Here, we define y as a tensor representing the equation 3 * x ** 2, which squares x and multiplies it by 3.
+
+Print the result of the equation:
+
+`print("Result of the equation is:", y)`
+This statement prints the value of y to the console.
+
+Perform backward propagation to compute the gradients:
+
+`y.backward()`
+This line triggers the backward propagation algorithm in PyTorch, which computes the gradients of y with respect to all the tensors that have requires_grad set to True. In this case, it computes the gradient of y with respect to x.
+
+Print the derivative of the equation at x = 3:
+
+`print("Derivative of the equation at x = 3 is:", x.grad)`
+This statement prints the computed gradient (derivative) of y with respect to x. It gives you the derivative of the equation at x = 3.
+
+Print various attributes of the tensor x:
+
+
+`print('data attribute of the tensor:', x.data)`
+`print('grad attribute of the tensor:', x.grad)`
+`print('grad_fn attribute of the tensor:', x.grad_fn)`
+`print("is_leaf attribute of the tensor:", x.is_leaf)`
+`print("requires_grad attribute of the tensor:", x.requires_grad)`
+These lines print various attributes of the tensor x to provide more information about its properties. data gives the underlying data of the tensor, grad contains the computed gradients, grad_fn refers to the function that generated the tensor (in this case, it's the multiplication operation), is_leaf indicates if the tensor is a leaf node in the computation graph, and requires_grad shows whether the tensor is set to compute gradients.
+
+Define tensors u and v with requires_grad set to True:
+
+
+`u = torch.tensor(3., requires_grad=True)`
+`v = torch.tensor(4., requires_grad=True)`
+Here, we create two tensors, u and v, with the values 3.0 and 4.0, respectively. Both tensors are set to compute gradients.
+
+Define a function f involving u and v:
+
+
+`f = u**3 + v**2 + 4*u*v`
