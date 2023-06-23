@@ -4640,9 +4640,7 @@ This code, heapq.nlargest(n, iterable) returns a list containing the n largest e
 
 When you run the code, it will print the n largest numbers and the n smallest numbers from the results list. In this case, it will display the 3 largest and 3 smallest numbers.
 
-Note that if there are multiple numbers with the same value as the n-th largest or smallest element, the function will include them in the result. For example, in this case, 89.9999999 and 89.899977 are both considered as the third largest numbers because they have the same value, so both are included in the result.
-
----
+Note that if there are multiple numbers with the same value as the n-th largest or smallest element, the function will include them in the result. For example, in this case, 89.9999999 and 89.899977 are both considered as the third largest numbers because they have the same value, so both are included in the resu
 
 ### Dervatives.ipynb
 **Code**
