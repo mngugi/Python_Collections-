@@ -4756,6 +4756,18 @@ Define a function f involving u and v:
 **Code:**
 
 ```python
+import pyfiglet
+import random
+
+font = random.choice(pyfiglet.FigletFont.getFonts())
+ascii_art = pyfiglet.figlet_format("HAPPY BIRTHDAY TO YOU!", font=font)
+
+greetings = f"\nHAPPY BIRTHDAY TO YOU!\n{ascii_art}"
+
+print(greetings)
+
+
+```
 generate a random ASCII art representation of the phrase "HAPPY BIRTHDAY TO YOU!" using the pyfiglet library. The code looks correct, assuming you have the pyfiglet library installed.
 
 Here's a breakdown of the code:
@@ -4778,4 +4790,4 @@ Printing the birthday greetings message:
 `print(greetings)`
 When executed, this code will output a random ASCII art representation of "HAPPY BIRTHDAY TO YOU!" along with the text "HAPPY BIRTHDAY TO YOU!" on separate lines.
 
-```
+
