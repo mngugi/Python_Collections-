@@ -4640,7 +4640,9 @@ This code, heapq.nlargest(n, iterable) returns a list containing the n largest e
 
 When you run the code, it will print the n largest numbers and the n smallest numbers from the results list. In this case, it will display the 3 largest and 3 smallest numbers.
 
-Note that if there are multiple numbers with the same value as the n-th largest or smallest element, the function will include them in the result. For example, in this case, 89.9999999 and 89.899977 are both considered as the third largest numbers because they have the same value, so both are included in the resu
+Note that if there are multiple numbers with the same value as the n-th largest or smallest element, the function will include them in the result. For example, in this case, 89.9999999 and 89.899977 are both considered as the third largest numbers because they have the same value, so both are included in the result.
+
+---
 
 ### Dervatives.ipynb
 **Code**
@@ -4747,3 +4749,33 @@ Define a function f involving u and v:
 
 
 `f = u**3 + v**2 + 4*u*v`
+
+---
+
+### question20.py
+**Code:**
+
+```python
+generate a random ASCII art representation of the phrase "HAPPY BIRTHDAY TO YOU!" using the pyfiglet library. The code looks correct, assuming you have the pyfiglet library installed.
+
+Here's a breakdown of the code:
+
+Importing the necessary modules:
+
+`import pyfiglet`
+`import random`
+Randomly selecting a font from the available fonts in pyfiglet:
+
+`font = random.choice(pyfiglet.FigletFont.getFonts())`
+Generating ASCII art text using the selected font:
+
+`ascii_art = pyfiglet.figlet_format("HAPPY BIRTHDAY TO YOU!", font=font)`
+Creating the final birthday greetings message by combining the original phrase and the ASCII art:
+
+`greetings = f"\nHAPPY BIRTHDAY TO YOU!\n{ascii_art}"`
+Printing the birthday greetings message:
+
+`print(greetings)`
+When executed, this code will output a random ASCII art representation of "HAPPY BIRTHDAY TO YOU!" along with the text "HAPPY BIRTHDAY TO YOU!" on separate lines.
+
+```
