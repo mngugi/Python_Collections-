@@ -4790,4 +4790,25 @@ Printing the birthday greetings message:
 `print(greetings)`
 When executed, this code will output a random ASCII art representation of "HAPPY BIRTHDAY TO YOU!" along with the text "HAPPY BIRTHDAY TO YOU!" on separate lines.
 
+---
+### question21.py
+**Code:**
 
+```python
+x = 'Mamakazi'
+print(x.replace('a', 'o'))
+
+
+```
+
+code will replace all occurrences of the letter 'a' with the letter 'o' in the string variable x. Here's the result of executing the code:
+
+`x = 'Mamakazi'`
+`print(x.replace('a', 'o'))`
+Output:
+
+
+`Momokozi`
+The letter 'a' in the original string 'Mamakazi' has been replaced with 'o', resulting in the new string 'Momokozi'.
+
+---
