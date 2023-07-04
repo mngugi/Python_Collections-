@@ -4812,3 +4812,75 @@ Output:
 The letter 'a' in the original string 'Mamakazi' has been replaced with 'o', resulting in the new string 'Momokozi'.
 
 ---
+
+### question22.py
+
+```python
+Biblitex
+@article{sullivan2019pyvista,
+  doi = {10.21105/joss.01450},
+  url = {https://doi.org/10.21105/joss.01450},
+  year = {2019},
+  month = {May},
+  publisher = {The Open Journal},
+  volume = {4},
+  number = {37},
+  pages = {1450},
+  author = {Bane Sullivan and Alexander Kaszynski},
+  title = {{PyVista}: {3D} plotting and mesh analysis through a streamlined interface for the {Visualization Toolkit} ({VTK})},
+  journal = {Journal of Open Source Software}
+}
+```
+an example of using the VTK (Visualization Toolkit) library to create a simple visualization of a cone.
+
+Here's a breakdown of the code:
+
+Importing the necessary modules:
+
+`import vtk`
+Creating a cone source:
+
+`cone = vtk.vtkConeSource()`
+This line creates a vtkConeSource object, which generates a cone geometry.
+
+Creating a mapper:
+
+`mapper = vtk.vtkPolyDataMapper()`
+`mapper.SetInputConnection(cone.GetOutputPort())`
+The mapper is responsible for converting the geometry into a format that can be rendered. In this case, we use vtkPolyDataMapper and connect it to the output port of the cone source.
+
+Creating an actor:
+
+`actor = vtk.vtkActor()`
+`actor.SetMapper(mapper)`
+The actor represents the rendered object in the scene. We associate the mapper with the actor.
+
+Creating a render window and interactor:
+
+`window = vtk.vtkRenderWindow()`
+`window.SetSize(500, 500)`
+
+`interactor = vtk.vtkRenderWindowInteractor()`
+`interactor.SetRenderWindow(window)`
+The render window represents the area where the visualization is displayed. The interactor handles user interaction with the window.
+
+Creating a renderer and adding the actor:
+
+`renderer = vtk.vtkRenderer()`
+`window.AddRenderer(renderer)`
+
+`renderer.AddActor(actor)`
+The renderer is responsible for rendering the actor in the render window. We add the actor to the renderer.
+
+Configuring the renderer:
+
+`renderer.SetBackground(0.1, 0.1, 0.4)`
+This line sets the background color of the renderer to blue.
+
+Rendering the scene and starting the interaction:
+
+`window.Render()`
+`interactor.Start()`
+This code renders the scene in the render window and starts the interaction loop, allowing the user to interact with the visualization.
+
+When you run this code, you should see a window pop up displaying a blue cone. You can navigate the 3D scene using mouse and keyboard controls provided by the interactor.
