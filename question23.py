@@ -34,16 +34,15 @@ for j in range(Y + 1):
         coord = x, y, z_val
         points.InsertNextPoint(coord)
 
-for j in range(Y):
-    for i in range(X):
-        quad = vtk.vtkQuad()
-        corner_id = get_id(i, j)
+        if i < X and j < Y:
+            quad = vtk.vtkQuad()
+            corner_id = get_id(i, j)
 
-        quad.GetPointIds().SetId(0, corner_id)
-        quad.GetPointIds().SetId(1, corner_id + 1)
-        quad.GetPointIds().SetId(2, corner_id + (X + 2))
-        quad.GetPointIds().SetId(3, corner_id + (X + 1))
-        cells.InsertNextCell(quad)
+            quad.GetPointIds().SetId(0, corner_id)
+            quad.GetPointIds().SetId(1, corner_id + 1)
+            quad.GetPointIds().SetId(2, corner_id + (X + 2))
+            quad.GetPointIds().SetId(3, corner_id + (X + 1))
+            cells.InsertNextCell(quad)
 
 mesh = vtk.vtkPolyData()
 mesh.SetPoints(points)
@@ -88,46 +87,6 @@ outline_filter.SetInputConnection(norms_generator.GetOutputPort())
 outline_mapper = vtk.vtkPolyDataMapper()
 outline_mapper.SetInputConnection(outline_filter.GetOutputPort())
 outline_actor = vtk.vtkActor()
-# ...
-
-# Add the outline and cube axes to the renderer
-outline_mapper = vtk.vtkPolyDataMapper()
-outline_mapper.SetInputConnection(outline_filter.GetOutputPort())
-outline_actor = vtk.vtkActor()
-outline_actor.SetMapper(outline_mapper)
-renderer.AddActor(outline_actor)
-
-# ...
-# ...
-
-# Create a renderer, render window, and interactor
-renderer = vtk.vtkRenderer()
-render_window = vtk.vtkRenderWindow()
-render_window.AddRenderer(renderer)
-interactor = vtk.vtkRenderWindowInteractor()
-interactor.SetRenderWindow(render_window)
-
-# Add the norms_generator output to the renderer
-mapper = vtk.vtkPolyDataMapper()
-mapper.SetInputConnection(norms_generator.GetOutputPort())
-actor = vtk.vtkActor()
-actor.SetMapper(mapper)
-renderer.AddActor(actor)
-
-# Create cube axes
-axes = vtk.vtkCubeAxesActor2D()
-axes.SetInputConnection(norms_generator.GetOutputPort())
-axes.SetCamera(renderer.GetActiveCamera())
-axes.SetLabelFormat("%1.1g")
-
-# Create an outline filter
-outline_filter = vtk.vtkOutlineFilter()
-outline_filter.SetInputConnection(norms_generator.GetOutputPort())
-
-# Add the outline and cube axes to the renderer
-outline_mapper = vtk.vtkPolyDataMapper()
-outline_mapper.SetInputConnection(outline_filter.GetOutputPort())
-outline_actor = vtk.vtkActor()
 outline_actor.SetMapper(outline_mapper)
 renderer.AddActor(outline_actor)
 
@@ -138,6 +97,3 @@ render_window.Render()
 # Initialize interactor and start the event loop
 interactor.Initialize()
 interactor.Start()
-
-
-
