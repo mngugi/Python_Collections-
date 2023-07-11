@@ -4884,3 +4884,65 @@ Rendering the scene and starting the interaction:
 This code renders the scene in the render window and starts the interaction loop, allowing the user to interact with the visualization.
 
 When you run this code, you should see a window pop up displaying a blue cone. You can navigate the 3D scene using mouse and keyboard controls provided by the interactor.
+
+---
+
+### Area_Circle.py
+**Code**
+
+```python
+import math
+
+def calculate_circle_area(radius):
+    """Calculates the area of a circle.
+
+    Args:
+      radius: The radius of the circle in meters.
+
+    Returns:
+      The area of the circle in square meters.
+    """
+
+    pi = math.pi
+    area = pi * radius ** 2
+    return area
+
+def calculate_cylinder_area(radius, height):
+    """Calculates the area of a cylinder.
+
+    Args:
+      radius: The radius of the cylinder in meters.
+      height: The height of the cylinder in meters.
+
+    Returns:
+      The area of the cylinder in square meters.
+    """
+
+    pi = math.pi
+    area = pi * radius ** 2 * height
+    return area
+
+if __name__ == "__main__":
+    radius = 2
+    height = 10
+    circle_area = calculate_circle_area(radius)
+    cylinder_area = calculate_cylinder_area(radius, height)
+    total_area = circle_area + cylinder_area
+    print(total_area)
+
+
+
+```
+
+Code for calculating the total surface area of a cylinder, which consists of the area of its circular base and the area of its curved surface. The code defines two functions: calculate_circle_area() and calculate_cylinder_area(). It then uses these functions to calculate the total surface area of a cylinder with a given radius and height.
+
+
+The math module is imported to access the value of pi (math.pi).
+The calculate_circle_area() function takes the radius as an argument and calculates the area of a circle using the formula pi * radius ** 2. It returns the calculated area.
+The calculate_cylinder_area() function takes both the radius and height as arguments. It calculates the area of the circular base by calling calculate_circle_area() with the given radius, and then multiplies it by the height to get the area of the curved surface. The total area is calculated as circle_area + cylinder_area. The function returns the total area.
+In the if __name__ == "__main__": block, a radius of 2 and height of 10 are assigned to the variables.
+The calculate_circle_area() function is called with the radius to calculate the area of the circle and is assigned to the variable circle_area.
+The calculate_cylinder_area() function is called with the radius and height to calculate the area of the cylinder and is assigned to the variable cylinder_area.
+The total area is calculated as the sum of the circle area and the cylinder area.
+The total area is printed to the console.
+If you run this code, it will output the total surface area of the cylinder with a radius of 2 and height of 10.
