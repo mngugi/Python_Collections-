@@ -4946,3 +4946,81 @@ The calculate_cylinder_area() function is called with the radius and height to c
 The total area is calculated as the sum of the circle area and the cylinder area.
 The total area is printed to the console.
 If you run this code, it will output the total surface area of the cylinder with a radius of 2 and height of 10.
+
+---
+### question24.py
+**Code**
+
+```python 
+import numpy as np
+from scipy import stats
+print ("Mean number is :")
+x = np.mean([89,12,36,45,65,78])
+print(x)
+
+print ("Geometric Mean number is :")
+g = stats.gmean([89,12,36,45,65,78])
+print(g)
+
+print ("Harmonic Mean number is :")
+n = stats.hmean([89,12,36,45,65,78])
+print(n)
+
+```
+
+Python code uses the libraries NumPy and SciPy to calculate the mean, geometric mean, and harmonic mean of a list of numbers. Let's go through the calculations and results for each mean:
+
+**Mean (Arithmetic Mean):**
+The arithmetic mean is the sum of all the numbers divided by the total count of numbers.
+python
+
+`import numpy as np`
+
+`# Input data`
+`data = [89, 12, 36, 45, 65, 78]`
+
+`# Calculate the arithmetic mean`
+`mean = np.mean(data)`
+
+`# Output the result`
+`print("Mean number is:", mean)`
+`Result: The arithmetic mean of the numbers [89, 12, 36, 45, 65, 78] is calculated as:`
+
+`Mean number is: 54.166666666666664`
+
+**Geometric Mean:**
+The geometric mean is the nth root of the product of n numbers, where n is the count of numbers.
+python 
+`from scipy import stats`
+
+`# Input data`
+`data = [89, 12, 36, 45, 65, 78]`
+
+`# Calculate the geometric mean`
+`geometric_mean = stats.gmean(data)`
+
+`# Output the result`
+`print("Geometric Mean number is:", geometric_mean)`
+`Result: The geometric mean of the numbers [89, 12, 36, 45, 65, 78] is calculated as:`
+
+`Geometric Mean number is: 45.09848955525905`
+
+**Harmonic Mean:**
+The harmonic mean is the reciprocal of the arithmetic mean of the reciprocals of the numbers.
+python
+
+`from scipy import stats`
+
+`# Input data`
+`data = [89, 12, 36, 45, 65, 78]`
+
+`# Calculate the harmonic mean`
+`harmonic_mean = stats.hmean(data)`
+
+`# Output the result`
+`print("Harmonic Mean number is:", harmonic_mean)`
+`Result: The harmonic mean of the numbers [89, 12, 36, 45, 65, 78] is calculated as:`
+
+`Harmonic Mean number is: 37.43279192908483`
+
+Note: The arithmetic mean (54.17) represents the typical "average" of the numbers, while the geometric mean (45.10) and harmonic mean (37.43) are used in specific contexts, such as calculating average growth rates (geometric mean) or average rates when dealing with rates or ratios (harmonic mean).
