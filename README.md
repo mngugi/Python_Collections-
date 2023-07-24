@@ -5024,3 +5024,22 @@ python
 `Harmonic Mean number is: 37.43279192908483`
 
 Note: The arithmetic mean (54.17) represents the typical "average" of the numbers, while the geometric mean (45.10) and harmonic mean (37.43) are used in specific contexts, such as calculating average growth rates (geometric mean) or average rates when dealing with rates or ratios (harmonic mean).
+
+---
+### question25.py
+**Code**
+
+```python
+from sympy import symbols, latex
+
+x, y = symbols('x y')
+expr = x**2 + 3*y - 1
+
+latex_code = latex(expr)
+print(latex_code)
+
+
+```
+use the sympy library to work with symbolic expressions.
+In this code, we import symbols and latex from sympy. We define two symbolic variables x and y using symbols. Then, we define a symbolic expression expr as x**2 + 3*y - 1. The latex function is used to convert the expression into its LaTeX representation, which is commonly used for displaying mathematical expressions in LaTeX documents or typesetting systems. The print(latex_code) statement displays the LaTeX code of the expression on the screen.
+
