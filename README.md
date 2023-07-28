@@ -899,7 +899,6 @@ w = float(x) + 2.5
 ```
 
 This code is a simple script that takes user input and assigns it to the variable `x`. The variable `x` is then converted to an integer and assigned to the variable `z`, and is also converted to a float and assigned to the variable `w`. The variable `y` is assigned the string value '`x is ineger`' (note the typo in the string).
-
 Here is a breakdown of what each line does:
 
 `x = input()` - This line prompts the user to enter some input, which is then stored as a string in the variable x.
@@ -1070,19 +1069,15 @@ print(get_cattle(257))
 This code that creates a dictionary called cattle_dict, defines a function called get_cattle, and prints the result of calling get_cattle with the argument 257. The function get_cattle takes a number argument and returns a dictionary with the cattle data that matches the given number.
 
 Here's how the code works:
-
-    The cattle_dict dictionary contains three dictionaries, each with the cattle data for a different cow. The cattle data includes a number, a name that specifies the breed of the cow, and a product that the cow is used for (milk or beef).
-    The get_cattle function takes a number argument, which is the number of the cow whose data we want to retrieve.
-    The function uses a for loop to iterate through each dictionary in cattle_dict.
-    For each dictionary, the function uses an if statement to check if the number key in the dictionary matches the number argument passed to the function.
-    If a match is found, the function returns the dictionary with the cattle data for the corresponding cow.
-    If no match is found, the function returns None.
+The cattle_dict dictionary contains three dictionaries, each with the cattle data for a different cow. The cattle data includes a number, a name that specifies the breed of the cow, and a product that the cow is used for (milk or beef).
+The get_cattle function takes a number argument, which is the number of the cow whose data we want to retrieve.
+The function uses a for loop to iterate through each dictionary in cattle_dict.
+For each dictionary, the function uses an if statement to check if the number key in the dictionary matches the number argument passed to the function.
+If a match is found, the function returns the dictionary with the cattle data for the corresponding cow.
+If no match is found, the function returns None.
 
 In this case, calling get_cattle(257) returns
-
-
 The function get_cattle takes a number argument and returns the corresponding cattle dictionary from the cattle_dict based on the number key.
-
 In the given cattle_dict, there are three cattle dictionaries with keys 257, 258, and 259. The function get_cattle will return the cattle dictionary that matches the number argument.
 
 In this case, when we call get_cattle(257), it will return the dictionary {'number': 257, 'name boran': 'brown', 'product': 'beef'} because this dictionary corresponds to the 257 key in cattle_dict.
@@ -1091,7 +1086,7 @@ Therefore, the output of print(get_cattle(257)) will be:
 
 {'number': 257, 'name boran': 'brown', 'product': 'beef'}
 
-
+---
 
 ## global_nonlocal.py
 **Code:**
@@ -5042,4 +5037,6 @@ print(latex_code)
 ```
 use the sympy library to work with symbolic expressions.
 In this code, we import symbols and latex from sympy. We define two symbolic variables x and y using symbols. Then, we define a symbolic expression expr as x**2 + 3*y - 1. The latex function is used to convert the expression into its LaTeX representation, which is commonly used for displaying mathematical expressions in LaTeX documents or typesetting systems. The print(latex_code) statement displays the LaTeX code of the expression on the screen.
+
+---
 
