@@ -899,7 +899,6 @@ w = float(x) + 2.5
 ```
 
 This code is a simple script that takes user input and assigns it to the variable `x`. The variable `x` is then converted to an integer and assigned to the variable `z`, and is also converted to a float and assigned to the variable `w`. The variable `y` is assigned the string value '`x is ineger`' (note the typo in the string).
-
 Here is a breakdown of what each line does:
 
 `x = input()` - This line prompts the user to enter some input, which is then stored as a string in the variable x.
@@ -1070,19 +1069,15 @@ print(get_cattle(257))
 This code that creates a dictionary called cattle_dict, defines a function called get_cattle, and prints the result of calling get_cattle with the argument 257. The function get_cattle takes a number argument and returns a dictionary with the cattle data that matches the given number.
 
 Here's how the code works:
-
-    The cattle_dict dictionary contains three dictionaries, each with the cattle data for a different cow. The cattle data includes a number, a name that specifies the breed of the cow, and a product that the cow is used for (milk or beef).
-    The get_cattle function takes a number argument, which is the number of the cow whose data we want to retrieve.
-    The function uses a for loop to iterate through each dictionary in cattle_dict.
-    For each dictionary, the function uses an if statement to check if the number key in the dictionary matches the number argument passed to the function.
-    If a match is found, the function returns the dictionary with the cattle data for the corresponding cow.
-    If no match is found, the function returns None.
+The cattle_dict dictionary contains three dictionaries, each with the cattle data for a different cow. The cattle data includes a number, a name that specifies the breed of the cow, and a product that the cow is used for (milk or beef).
+The get_cattle function takes a number argument, which is the number of the cow whose data we want to retrieve.
+The function uses a for loop to iterate through each dictionary in cattle_dict.
+For each dictionary, the function uses an if statement to check if the number key in the dictionary matches the number argument passed to the function.
+If a match is found, the function returns the dictionary with the cattle data for the corresponding cow.
+If no match is found, the function returns None.
 
 In this case, calling get_cattle(257) returns
-
-
 The function get_cattle takes a number argument and returns the corresponding cattle dictionary from the cattle_dict based on the number key.
-
 In the given cattle_dict, there are three cattle dictionaries with keys 257, 258, and 259. The function get_cattle will return the cattle dictionary that matches the number argument.
 
 In this case, when we call get_cattle(257), it will return the dictionary {'number': 257, 'name boran': 'brown', 'product': 'beef'} because this dictionary corresponds to the 257 key in cattle_dict.
@@ -1091,7 +1086,7 @@ Therefore, the output of print(get_cattle(257)) will be:
 
 {'number': 257, 'name boran': 'brown', 'product': 'beef'}
 
-
+---
 
 ## global_nonlocal.py
 **Code:**
@@ -4640,7 +4635,9 @@ This code, heapq.nlargest(n, iterable) returns a list containing the n largest e
 
 When you run the code, it will print the n largest numbers and the n smallest numbers from the results list. In this case, it will display the 3 largest and 3 smallest numbers.
 
-Note that if there are multiple numbers with the same value as the n-th largest or smallest element, the function will include them in the result. For example, in this case, 89.9999999 and 89.899977 are both considered as the third largest numbers because they have the same value, so both are included in the resu
+Note that if there are multiple numbers with the same value as the n-th largest or smallest element, the function will include them in the result. For example, in this case, 89.9999999 and 89.899977 are both considered as the third largest numbers because they have the same value, so both are included in the result.
+
+---
 
 ### Dervatives.ipynb
 **Code**
@@ -4747,3 +4744,299 @@ Define a function f involving u and v:
 
 
 `f = u**3 + v**2 + 4*u*v`
+
+---
+
+### question20.py
+**Code:**
+
+```python
+import pyfiglet
+import random
+
+font = random.choice(pyfiglet.FigletFont.getFonts())
+ascii_art = pyfiglet.figlet_format("HAPPY BIRTHDAY TO YOU!", font=font)
+
+greetings = f"\nHAPPY BIRTHDAY TO YOU!\n{ascii_art}"
+
+print(greetings)
+
+
+```
+generate a random ASCII art representation of the phrase "HAPPY BIRTHDAY TO YOU!" using the pyfiglet library. The code looks correct, assuming you have the pyfiglet library installed.
+
+Here's a breakdown of the code:
+
+Importing the necessary modules:
+
+`import pyfiglet`
+`import random`
+Randomly selecting a font from the available fonts in pyfiglet:
+
+`font = random.choice(pyfiglet.FigletFont.getFonts())`
+Generating ASCII art text using the selected font:
+
+`ascii_art = pyfiglet.figlet_format("HAPPY BIRTHDAY TO YOU!", font=font)`
+Creating the final birthday greetings message by combining the original phrase and the ASCII art:
+
+`greetings = f"\nHAPPY BIRTHDAY TO YOU!\n{ascii_art}"`
+Printing the birthday greetings message:
+
+`print(greetings)`
+When executed, this code will output a random ASCII art representation of "HAPPY BIRTHDAY TO YOU!" along with the text "HAPPY BIRTHDAY TO YOU!" on separate lines.
+
+---
+### question21.py
+**Code:**
+
+```python
+x = 'Mamakazi'
+print(x.replace('a', 'o'))
+
+
+```
+
+code will replace all occurrences of the letter 'a' with the letter 'o' in the string variable x. Here's the result of executing the code:
+
+`x = 'Mamakazi'`
+`print(x.replace('a', 'o'))`
+Output:
+
+
+`Momokozi`
+The letter 'a' in the original string 'Mamakazi' has been replaced with 'o', resulting in the new string 'Momokozi'.
+
+---
+
+### question22.py
+
+```python
+Biblitex
+@article{sullivan2019pyvista,
+  doi = {10.21105/joss.01450},
+  url = {https://doi.org/10.21105/joss.01450},
+  year = {2019},
+  month = {May},
+  publisher = {The Open Journal},
+  volume = {4},
+  number = {37},
+  pages = {1450},
+  author = {Bane Sullivan and Alexander Kaszynski},
+  title = {{PyVista}: {3D} plotting and mesh analysis through a streamlined interface for the {Visualization Toolkit} ({VTK})},
+  journal = {Journal of Open Source Software}
+}
+```
+an example of using the VTK (Visualization Toolkit) library to create a simple visualization of a cone.
+
+Here's a breakdown of the code:
+
+Importing the necessary modules:
+
+`import vtk`
+Creating a cone source:
+
+`cone = vtk.vtkConeSource()`
+This line creates a vtkConeSource object, which generates a cone geometry.
+
+Creating a mapper:
+
+`mapper = vtk.vtkPolyDataMapper()`
+`mapper.SetInputConnection(cone.GetOutputPort())`
+The mapper is responsible for converting the geometry into a format that can be rendered. In this case, we use vtkPolyDataMapper and connect it to the output port of the cone source.
+
+Creating an actor:
+
+`actor = vtk.vtkActor()`
+`actor.SetMapper(mapper)`
+The actor represents the rendered object in the scene. We associate the mapper with the actor.
+
+Creating a render window and interactor:
+
+`window = vtk.vtkRenderWindow()`
+`window.SetSize(500, 500)`
+
+`interactor = vtk.vtkRenderWindowInteractor()`
+`interactor.SetRenderWindow(window)`
+The render window represents the area where the visualization is displayed. The interactor handles user interaction with the window.
+
+Creating a renderer and adding the actor:
+
+`renderer = vtk.vtkRenderer()`
+`window.AddRenderer(renderer)`
+
+`renderer.AddActor(actor)`
+The renderer is responsible for rendering the actor in the render window. We add the actor to the renderer.
+
+Configuring the renderer:
+
+`renderer.SetBackground(0.1, 0.1, 0.4)`
+This line sets the background color of the renderer to blue.
+
+Rendering the scene and starting the interaction:
+
+`window.Render()`
+`interactor.Start()`
+This code renders the scene in the render window and starts the interaction loop, allowing the user to interact with the visualization.
+
+When you run this code, you should see a window pop up displaying a blue cone. You can navigate the 3D scene using mouse and keyboard controls provided by the interactor.
+
+---
+
+### Area_Circle.py
+**Code**
+
+```python
+import math
+
+def calculate_circle_area(radius):
+    """Calculates the area of a circle.
+
+    Args:
+      radius: The radius of the circle in meters.
+
+    Returns:
+      The area of the circle in square meters.
+    """
+
+    pi = math.pi
+    area = pi * radius ** 2
+    return area
+
+def calculate_cylinder_area(radius, height):
+    """Calculates the area of a cylinder.
+
+    Args:
+      radius: The radius of the cylinder in meters.
+      height: The height of the cylinder in meters.
+
+    Returns:
+      The area of the cylinder in square meters.
+    """
+
+    pi = math.pi
+    area = pi * radius ** 2 * height
+    return area
+
+if __name__ == "__main__":
+    radius = 2
+    height = 10
+    circle_area = calculate_circle_area(radius)
+    cylinder_area = calculate_cylinder_area(radius, height)
+    total_area = circle_area + cylinder_area
+    print(total_area)
+
+
+
+```
+
+Code for calculating the total surface area of a cylinder, which consists of the area of its circular base and the area of its curved surface. The code defines two functions: calculate_circle_area() and calculate_cylinder_area(). It then uses these functions to calculate the total surface area of a cylinder with a given radius and height.
+
+
+The math module is imported to access the value of pi (math.pi).
+The calculate_circle_area() function takes the radius as an argument and calculates the area of a circle using the formula pi * radius ** 2. It returns the calculated area.
+The calculate_cylinder_area() function takes both the radius and height as arguments. It calculates the area of the circular base by calling calculate_circle_area() with the given radius, and then multiplies it by the height to get the area of the curved surface. The total area is calculated as circle_area + cylinder_area. The function returns the total area.
+In the if __name__ == "__main__": block, a radius of 2 and height of 10 are assigned to the variables.
+The calculate_circle_area() function is called with the radius to calculate the area of the circle and is assigned to the variable circle_area.
+The calculate_cylinder_area() function is called with the radius and height to calculate the area of the cylinder and is assigned to the variable cylinder_area.
+The total area is calculated as the sum of the circle area and the cylinder area.
+The total area is printed to the console.
+If you run this code, it will output the total surface area of the cylinder with a radius of 2 and height of 10.
+
+---
+### question24.py
+**Code**
+
+```python 
+import numpy as np
+from scipy import stats
+print ("Mean number is :")
+x = np.mean([89,12,36,45,65,78])
+print(x)
+
+print ("Geometric Mean number is :")
+g = stats.gmean([89,12,36,45,65,78])
+print(g)
+
+print ("Harmonic Mean number is :")
+n = stats.hmean([89,12,36,45,65,78])
+print(n)
+
+```
+
+Python code uses the libraries NumPy and SciPy to calculate the mean, geometric mean, and harmonic mean of a list of numbers. Let's go through the calculations and results for each mean:
+
+**Mean (Arithmetic Mean):**
+The arithmetic mean is the sum of all the numbers divided by the total count of numbers.
+python
+
+`import numpy as np`
+
+`# Input data`
+`data = [89, 12, 36, 45, 65, 78]`
+
+`# Calculate the arithmetic mean`
+`mean = np.mean(data)`
+
+`# Output the result`
+`print("Mean number is:", mean)`
+`Result: The arithmetic mean of the numbers [89, 12, 36, 45, 65, 78] is calculated as:`
+
+`Mean number is: 54.166666666666664`
+
+**Geometric Mean:**
+The geometric mean is the nth root of the product of n numbers, where n is the count of numbers.
+python 
+`from scipy import stats`
+
+`# Input data`
+`data = [89, 12, 36, 45, 65, 78]`
+
+`# Calculate the geometric mean`
+`geometric_mean = stats.gmean(data)`
+
+`# Output the result`
+`print("Geometric Mean number is:", geometric_mean)`
+`Result: The geometric mean of the numbers [89, 12, 36, 45, 65, 78] is calculated as:`
+
+`Geometric Mean number is: 45.09848955525905`
+
+**Harmonic Mean:**
+The harmonic mean is the reciprocal of the arithmetic mean of the reciprocals of the numbers.
+python
+
+`from scipy import stats`
+
+`# Input data`
+`data = [89, 12, 36, 45, 65, 78]`
+
+`# Calculate the harmonic mean`
+`harmonic_mean = stats.hmean(data)`
+
+`# Output the result`
+`print("Harmonic Mean number is:", harmonic_mean)`
+`Result: The harmonic mean of the numbers [89, 12, 36, 45, 65, 78] is calculated as:`
+
+`Harmonic Mean number is: 37.43279192908483`
+
+Note: The arithmetic mean (54.17) represents the typical "average" of the numbers, while the geometric mean (45.10) and harmonic mean (37.43) are used in specific contexts, such as calculating average growth rates (geometric mean) or average rates when dealing with rates or ratios (harmonic mean).
+
+---
+### question25.py
+**Code**
+
+```python
+from sympy import symbols, latex
+
+x, y = symbols('x y')
+expr = x**2 + 3*y - 1
+
+latex_code = latex(expr)
+print(latex_code)
+
+
+```
+use the sympy library to work with symbolic expressions.
+In this code, we import symbols and latex from sympy. We define two symbolic variables x and y using symbols. Then, we define a symbolic expression expr as x**2 + 3*y - 1. The latex function is used to convert the expression into its LaTeX representation, which is commonly used for displaying mathematical expressions in LaTeX documents or typesetting systems. The print(latex_code) statement displays the LaTeX code of the expression on the screen.
+
+---
+
