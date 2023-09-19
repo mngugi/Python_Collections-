@@ -1,0 +1,552 @@
+{
+  "Frequency": "Quarterly",
+  "bytes": 5554653,
+  "datahub": {
+    "created": "2018-01-10T08:50:00.114612",
+    "findability": "published",
+    "flowid": "core/house-prices-global/7",
+    "modified": "2018-03-15T06:34:29.502265",
+    "owner": "core",
+    "ownerid": "core"
+  },
+  "description": "Contain data for 59 countries at a quarterly frequency (real series are the nominal price series deflated by the consumer price index), both in levels and in growth rates (ie four series per country). These indicators have been selected from the detailed data set to facilitate access for users and enhance comparability. The BIS has made the selection based on the Handbook on Residential Property Prices and the experience and metadata of central banks. An analysis based on these selected indicators is also released on a quarterly basis, with a particular focus on longer-term developments in the May release.",
+  "hash": "d3197c3e44c896dc6d05c0d819a71142",
+  "id": "core/house-prices-global",
+  "name": "house-prices-global",
+  "resources": [
+    {
+      "bytes": 295193,
+      "datahub": {
+        "type": "original"
+      },
+      "dpp:streamedFrom": "https://s3.amazonaws.com/rawstore.datahub.io/8371a308c0fd97dc0b446ef23d0acec5.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "name": "nominal-index_original",
+      "path": "archive/nominal-index.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "bytes": 290470,
+      "datahub": {
+        "type": "original"
+      },
+      "dpp:streamedFrom": "https://s3.amazonaws.com/rawstore.datahub.io/9789df5a61f38ac71f28018ff9e2db1c.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "name": "nominal-year_original",
+      "path": "archive/nominal-year.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "bytes": 295535,
+      "datahub": {
+        "type": "original"
+      },
+      "dpp:streamedFrom": "https://s3.amazonaws.com/rawstore.datahub.io/f6789c8cef39990a25937d5117cfb74c.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "name": "real-index_original",
+      "path": "archive/real-index.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "bytes": 290806,
+      "datahub": {
+        "type": "original"
+      },
+      "dpp:streamedFrom": "https://s3.amazonaws.com/rawstore.datahub.io/81c2af90074d73dbfbb45eb11648589c.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "name": "real-year_original",
+      "path": "archive/real-year.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "bytes": 2312,
+      "datahub": {
+        "type": "derived/report"
+      },
+      "description": "Validation report for tabular data",
+      "dpp:streamedFrom": "/tmp/tmpacovmhty/core/house-prices-global/validation_report/data/e30c07afcea86ac74ec9dad6ac0ed3cf/validation_report.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "e30c07afcea86ac74ec9dad6ac0ed3cf",
+      "name": "validation_report",
+      "path": "data/validation_report.json",
+      "profile": "data-resource"
+    },
+    {
+      "bytes": 307821,
+      "datahub": {
+        "derivedFrom": [
+          "nominal-index"
+        ],
+        "type": "derived/csv"
+      },
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpacovmhty/core/house-prices-global/nominal-index_csv/data/8371a308c0fd97dc0b446ef23d0acec5/nominal-index_csv.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "8371a308c0fd97dc0b446ef23d0acec5",
+      "mediatype": "text/csv",
+      "name": "nominal-index_csv",
+      "path": "data/nominal-index_csv.csv",
+      "profile": "tabular-data-resource",
+      "rowcount": 12627,
+      "schema": {
+        "fields": [
+          {
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 303098,
+      "datahub": {
+        "derivedFrom": [
+          "nominal-year"
+        ],
+        "type": "derived/csv"
+      },
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpacovmhty/core/house-prices-global/nominal-year_csv/data/9789df5a61f38ac71f28018ff9e2db1c/nominal-year_csv.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "9789df5a61f38ac71f28018ff9e2db1c",
+      "mediatype": "text/csv",
+      "name": "nominal-year_csv",
+      "path": "data/nominal-year_csv.csv",
+      "profile": "tabular-data-resource",
+      "rowcount": 12627,
+      "schema": {
+        "fields": [
+          {
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 308163,
+      "datahub": {
+        "derivedFrom": [
+          "real-index"
+        ],
+        "type": "derived/csv"
+      },
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpacovmhty/core/house-prices-global/real-index_csv/data/f6789c8cef39990a25937d5117cfb74c/real-index_csv.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "f6789c8cef39990a25937d5117cfb74c",
+      "mediatype": "text/csv",
+      "name": "real-index_csv",
+      "path": "data/real-index_csv.csv",
+      "profile": "tabular-data-resource",
+      "rowcount": 12627,
+      "schema": {
+        "fields": [
+          {
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 303434,
+      "datahub": {
+        "derivedFrom": [
+          "real-year"
+        ],
+        "type": "derived/csv"
+      },
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpacovmhty/core/house-prices-global/real-year_csv/data/81c2af90074d73dbfbb45eb11648589c/real-year_csv.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "81c2af90074d73dbfbb45eb11648589c",
+      "mediatype": "text/csv",
+      "name": "real-year_csv",
+      "path": "data/real-year_csv.csv",
+      "profile": "tabular-data-resource",
+      "rowcount": 12627,
+      "schema": {
+        "fields": [
+          {
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 790719,
+      "datahub": {
+        "derivedFrom": [
+          "nominal-index"
+        ],
+        "type": "derived/json"
+      },
+      "dpp:streamedFrom": "/tmp/tmpacovmhty/core/house-prices-global/nominal-index_json/data/7178e279af2f942f6d4510d9d0ad44d7/nominal-index_json.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "7178e279af2f942f6d4510d9d0ad44d7",
+      "mediatype": "text/csv",
+      "name": "nominal-index_json",
+      "path": "data/nominal-index_json.json",
+      "profile": "tabular-data-resource",
+      "rowcount": 12627,
+      "schema": {
+        "fields": [
+          {
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 786484,
+      "datahub": {
+        "derivedFrom": [
+          "nominal-year"
+        ],
+        "type": "derived/json"
+      },
+      "dpp:streamedFrom": "/tmp/tmpacovmhty/core/house-prices-global/nominal-year_json/data/902f512359b3126a6ce57b796fd334ba/nominal-year_json.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "902f512359b3126a6ce57b796fd334ba",
+      "mediatype": "text/csv",
+      "name": "nominal-year_json",
+      "path": "data/nominal-year_json.json",
+      "profile": "tabular-data-resource",
+      "rowcount": 12627,
+      "schema": {
+        "fields": [
+          {
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 791061,
+      "datahub": {
+        "derivedFrom": [
+          "real-index"
+        ],
+        "type": "derived/json"
+      },
+      "dpp:streamedFrom": "/tmp/tmpacovmhty/core/house-prices-global/real-index_json/data/c23868336cccf557b0deafe42cca4bd1/real-index_json.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "c23868336cccf557b0deafe42cca4bd1",
+      "mediatype": "text/csv",
+      "name": "real-index_json",
+      "path": "data/real-index_json.json",
+      "profile": "tabular-data-resource",
+      "rowcount": 12627,
+      "schema": {
+        "fields": [
+          {
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 786820,
+      "datahub": {
+        "derivedFrom": [
+          "real-year"
+        ],
+        "type": "derived/json"
+      },
+      "dpp:streamedFrom": "/tmp/tmpacovmhty/core/house-prices-global/real-year_json/data/ee5f301dae26cb823704a4e739d1eebb/real-year_json.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "ee5f301dae26cb823704a4e739d1eebb",
+      "mediatype": "text/csv",
+      "name": "real-year_json",
+      "path": "data/real-year_json.json",
+      "profile": "tabular-data-resource",
+      "rowcount": 12627,
+      "schema": {
+        "fields": [
+          {
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "format": "default",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "price",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 2737,
+      "dpp:streamedFrom": "/tmp/tmp9xntqxtt/README.md",
+      "format": "md",
+      "name": "readme",
+      "path": "README.md"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Bank For International Settlements BIS",
+      "title": "BIS Selected property prices",
+      "url": "https://www.bis.org/statistics/full_bis_selected_pp_csv.zip",
+      "web": "https://www.bis.org/statistics/pp_selected.htm"
+    }
+  ],
+  "title": "Residential property price statistics from different countries"
+}
