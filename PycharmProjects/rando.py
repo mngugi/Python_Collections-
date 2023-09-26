@@ -9,4 +9,9 @@ if random.random() <= 0.21:
 else:
     print("oh missed!")
 
-    
+Goals = 0
+
+for j in range(0, 1000):
+    if random.random() <=0.1:
+        Goals +=1
+print(Goals)
