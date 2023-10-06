@@ -27,3 +27,4 @@ for j in range(0, 1000):
         print("Away Wins! {} - {}".format(HomexG_goals, AwayxG_goals))
     else:
         print("Share of the points! {} - {}".format(HomexG_goals, AwayxG_goals))
+print('-----------------------------------------------------------------------')
