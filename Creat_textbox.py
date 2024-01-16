@@ -1,7 +1,7 @@
 # code creates a textbox
 import tkinter as tk
 from tkinter import *
-
+# create the window frame
 win = Tk()
 win.resizable(False, False)
 win.title("Text Box Widget")
