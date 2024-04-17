@@ -1,7 +1,7 @@
 import math
 
 def calculate_circle_area(radius):
-    """Calculates the area of a circle.
+    i = """Calculates the area of a circle.
 
     Args:
       radius: The radius of the circle in meters.
@@ -9,13 +9,13 @@ def calculate_circle_area(radius):
     Returns:
       The area of the circle in square meters.
     """
-
+    print(i)
     pi = math.pi
     area = pi * radius ** 2
     return area
 
     #create a function calculate_circle_area
-    
+
 def calculate_cylinder_area(radius, height):
     """Calculates the area of a cylinder.
 
