@@ -3,7 +3,7 @@ import numpy as np
 import array as arr
 
 # create an array of 5 integers using a function arr1()
-
+print("================================")
 def arr1():
     array1 = arr.array('i', [4,6,7,9,8] )
     row = ''
@@ -14,7 +14,7 @@ def arr1():
 
 
 
-print("\nArray2\n")
+#print("\nArray2\n")
 
 def arr2():
     array2 = arr.array('i', [2,3,4,5,4] )
