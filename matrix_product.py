@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 def xarr():
     arry = np.arange(0,9).reshape(3,3)
