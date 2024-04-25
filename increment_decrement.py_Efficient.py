@@ -25,7 +25,7 @@ print("\nIncrement by 5")
 original_array[0:5] += 5
 print_array(original_array)
 
-# Multiply each element by 1 (no change)
+# Multiply each element by 2 (no change)
 print("\nMultiply by 1")
-original_array[0:5] *= 1
+original_array[0:5] *= 2
 print_array(original_array)

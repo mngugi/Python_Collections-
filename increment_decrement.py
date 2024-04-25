@@ -26,6 +26,6 @@ print(new_array)
 
 
 print("\nIncrement by multiplication of 1\n")
-new_array[0:5] *=1
+new_array[0:5] *=2
 print(new_array)
 
