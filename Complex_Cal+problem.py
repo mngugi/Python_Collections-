@@ -25,7 +25,7 @@ def arr2():
 
 arr2()
 print ("---------------------------------------------------- ")
-print("\n Mathematical Operations using functions()")
+print("\nMathematical Operations using functions()")
 # Add 4 to each element of the array
 print ("\nAddition operator +4: \n")
 def add_4(array1, array2):
