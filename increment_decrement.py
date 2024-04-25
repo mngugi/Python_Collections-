@@ -1,28 +1,31 @@
 import numpy as np
 import math
-print ("Array of :")
-arr = np.arange(5)
-print(arr)
+print ("\nArray of :\n")
 
-print(" ")
-print("Increment by 1")
-arr[0:5] +=1
-print(arr)
+def arr():
+    arr = np.arange(5)
+    print(arr)
+    return arr
+arr()
 
-print(" ")
-print("Increment by 1")
-arr[0:5] -=1
-print(arr)
+new_array = arr()
+print("\nIncrement by 1\n")
+new_array[0:5] +=1
+print(new_array)
 
 
-print(" ")
-print("Increment by 5")
-arr[0:5] +=5
-print(arr)
+print("\nIncrement by 1\n")
+new_array[0:5] -=1
+print(new_array)
 
-print(" ")
-print("Increment by multiplication of 1")
-arr[0:5] *=5
-print(arr)
 
+
+print("\nIncrement by 5\n")
+new_array[0:5] +=5
+print(new_array)
+
+
+print("\nIncrement by multiplication of 1\n")
+new_array[0:5] *=1
+print(new_array)
 
