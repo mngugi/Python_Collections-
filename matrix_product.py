@@ -2,26 +2,24 @@ import numpy as np
 
 def xarr():
     arry = np.arange(0,9).reshape(3,3)
-    print (arry)
+    print ("\nThe matrix is\n",arry)
     return arry
 
-print("The matrix:", xarr())
+print("The matrix:\n", xarr())
 
 def yarr():
     yarr = np.ones((3,3))
-    
     print (yarr)
     return yarr
 
-print("The matrix:", yarr())
+print("\nThe matrix:\n", yarr())
 
 
-print("\nMatrx Product")
+print("\nMatrx Product\n")
 xy = np.dot(xarr(),yarr())
 print(xy)
 
-print(" ")
-print("Matrx Product using xarr.dot(yarr) Functions")
+print("\nMatrx Product using xarr.dot(yarr) Functions\n")
 xyi = xarr().dot(yarr())
 print(xyi)
 
