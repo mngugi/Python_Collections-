@@ -12,6 +12,7 @@ vertical = velocity*time - 0.5*gravity*time**2
 
 
 plt.plot(time, vertical)
+plt.title('Trajectory of the ball')
 plt.xlabel('time (s)')
 plt.ylabel('vertical (m) ')
 
