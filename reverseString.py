@@ -4,7 +4,7 @@ def revers_String(st):
 i = "Kuchekasana"
 r = revers_String(i)
 
-print("everse order: ", r)
+print("reverse order: ", r)
 
     
     
