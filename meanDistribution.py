@@ -13,6 +13,8 @@ print("Mean is: ", X_u)
 
 plt.hist(X, bins=10, edgecolor='orange')
 
+plt.title('Mean Distribution Sample')
+
 plt.xlabel('vlaues')
 plt.ylabel('Frequency')
 
