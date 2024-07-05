@@ -1,5 +1,9 @@
 
 passw = "h2jjh"
+passw_input = input("Enter passwd: ")
+
+if passw_input == "h2jjh":
+    print("You pawned the system:")
 
 if passw == "hjjh" :
     print("Account unlock")
