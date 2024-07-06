@@ -23,3 +23,15 @@ while a < max_number:
 
 print("programm exhausted")    
     
+domestic_animals = ["Goats","Cattle","dogs","cats"]
+
+for animals in domestic_animals:
+    if animals == "dogs":
+        break
+    print(animals)
+    
+for animals in domestic_animals:
+    if animals == "dogs":
+        continue
+    print(animals)
+    
