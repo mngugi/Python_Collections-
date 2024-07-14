@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 
+
+
 # Create the data
 x_axis = [12, 15, 36, 65]
 y_axis = [15, 19, 40, 60]
