@@ -3,4 +3,4 @@ def sum(bum):
         return 1
 
     return bum + sum(bum - 1 )
-print(bum(4))
+print(sum(4))
