@@ -1,7 +1,7 @@
 user_input = str(input("Enter a Phrase: "))
 text = user_input.split()
-Acronyms = ""
+Acronyms = " "
 for i in text:
-    Acronyms = Acronyms+str(i[1]).upper()
+    Acronyms = Acronyms+str(i[2]).upper()
 
 print(Acronyms)
