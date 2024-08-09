@@ -4,6 +4,9 @@ Spyder Editor
 Author : Mwangi
 Purpose : Simple program to append data types creating a lists
 
+[]: This is the literal syntax for creating an empty list in Python.
+empty = []: This assigns the empty list to the variable empty.
+
 """
 empty = []
 print("1.Append an integer")
