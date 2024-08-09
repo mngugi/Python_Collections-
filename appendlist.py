@@ -22,6 +22,8 @@ print("4.Append a string")
 print("-------------------")
 empty.append('Stingo')
 print("-------------------")
+empty.append("Stingo is a funny name!")
+empty.append(":0 , :))")
 print(empty)
 print("-------------------")
 
