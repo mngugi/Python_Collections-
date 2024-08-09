@@ -61,7 +61,6 @@ print(" ")
 print (" ================================ ")
 print ("Arithmetic operations using sine and square root: ")
 
-
 print(" ")
 print ("sine operator: ")
 sinarr = np.sin(arr)
