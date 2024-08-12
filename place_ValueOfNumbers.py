@@ -15,6 +15,6 @@ thousands,hundreds, tens, ones = read_positions(number)
 print(f"thousand: {thousands}, Hundreds: {hundreds}, Tens: {tens}, Ones: {ones}")
 
 print('---------------------Round the numbers--------------------------')
-roundedNumber = round(number, -2)
+roundedNumber = round(number, -1) #rounds the number to the nearest 10tenth
 print(roundedNumber)
 
