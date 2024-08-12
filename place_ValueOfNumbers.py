@@ -17,5 +17,5 @@ print(f"thousand: {thousands}, Hundreds: {hundreds}, Tens: {tens}, Ones: {ones}"
 
 print('---------------------Round the numbers--------------------------')
 roundedNumber = round(number, -1) #rounds the number to the nearest 10tenth
-print(roundedNumber)
+print("Rounded to nearest hundred:",roundedNumber)
 
