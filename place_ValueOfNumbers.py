@@ -15,6 +15,6 @@ thousands,hundreds, tens, ones = read_positions(number)
 print(f"thousand: {thousands}, Hundreds: {hundreds}, Tens: {tens}, Ones: {ones}")
 
 print('---------------------Round the numbers--------------------------')
-j = number
-round(j)
+roundedNumber = round(number, -2)
+print(roundedNumber)
 
