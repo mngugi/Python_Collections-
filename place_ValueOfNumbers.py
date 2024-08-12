@@ -6,7 +6,7 @@ def read_positions(number):
     thousands = (number // 1000) % 10
 
     # Return the results
-    return hundreds, tens, ones
+    return thousands, hundreds, tens, ones
 
 
 # Example usage:
