@@ -10,8 +10,8 @@ def read_positions(number):
 
 
 # Example usage:
-number = 1234
-print(number)
+number = input("Enter Number: ")
+print("Number",number)
 thousands,hundreds, tens, ones = read_positions(number)
 print(f"thousand: {thousands}, Hundreds: {hundreds}, Tens: {tens}, Ones: {ones}")
 
