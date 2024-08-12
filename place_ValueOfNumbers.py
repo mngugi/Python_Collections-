@@ -11,6 +11,7 @@ def read_positions(number):
 
 # Example usage:
 number = 1234
+print(number)
 thousands,hundreds, tens, ones = read_positions(number)
 print(f"thousand: {thousands}, Hundreds: {hundreds}, Tens: {tens}, Ones: {ones}")
 
