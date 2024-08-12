@@ -3,6 +3,7 @@ def read_positions(number):
     ones = number % 10
     tens = (number // 10) % 10
     hundreds = (number // 100) % 10
+    thousands = (number // 1000) % 10
 
     # Return the results
     return hundreds, tens, ones
@@ -10,5 +11,5 @@ def read_positions(number):
 
 # Example usage:
 number = 1234
-hundreds, tens, ones = read_positions(number)
-print(f"Hundreds: {hundreds}, Tens: {tens}, Ones: {ones}")
+thousands,hundreds, tens, ones = read_positions(number)
+print(f"Thousand: {Thousands},Hundreds: {hundreds}, Tens: {tens}, Ones: {ones}")
