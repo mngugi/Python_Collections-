@@ -2,7 +2,7 @@ from numpy import linspace
 
 import matplotlib.pyplot as plt
 
-velocity = 5
+velocity = 12
 
 gravity = 9.81
 
