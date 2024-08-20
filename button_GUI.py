@@ -12,9 +12,15 @@ r = tk.Tk()
 def echoPhrase():
     print("Echoed message is, Button Pressed")
 
+def eco_phrase1():
+    print("Second button works okay")    
+
 r.title('Buttons')
 button = tk.Button(r, text='Print', width=25, command=echoPhrase)
+button1 = tk.Button(r, text='Print', width=25, command=eco_phrase1)
 
 button.pack()
+button1.pack()
+
 r.mainloop()
 
