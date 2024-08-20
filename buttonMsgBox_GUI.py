@@ -16,9 +16,9 @@ def echoText():
 
 button = tk.Button(r, text='Print',background='blue',foreground='yellow', width=25, command=echoPhraseInMsgBox)
 
-label_1 = tk.Label(r, text="print", fg='white', bg='red', width=25, height=20, command=echoText )
+label_1 = tk.Label(r, text="print", fg='white', bg='gray', width=25, height=20)
 
 button.pack()
-label_1()
+label_1.pack()
 r.mainloop()
 
