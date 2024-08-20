@@ -12,7 +12,7 @@ def echoPhraseInMsgBox():
    
 
 def echoText():
-    return messagebox.showwarning("Type the correct command!")
+    return messagebox.showwarning("Incorrect Command", "Please type the correct command!")
 
 button = tk.Button(r, text='Print',background='blue',foreground='yellow', width=25, command=echoPhraseInMsgBox)
 
