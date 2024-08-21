@@ -14,7 +14,7 @@ def echoPhraseInMsgBox():
 def echoText():
     return messagebox.showwarning("Incorrect Command", "Please type the correct command!")
 
-button = tk.Button(r, text='Print',background='blue',foreground='yellow', width=25, command=echoPhraseInMsgBox)
+button = tk.Button(r, text='Print',background='orange',foreground='yellow', width=25, command=echoPhraseInMsgBox)
 
 label_1 = tk.Label(r, text="print", fg='white', bg='gray', width=25, height=20)
 
