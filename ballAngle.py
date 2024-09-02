@@ -1,10 +1,10 @@
-from math import *
+import math
 
 horizontalPosition = 10
 verticalPosition = 10
 
-angle = atan(horizontalPosition/verticalPosition)
+angle = math.atan(horizontalPosition / verticalPosition)
 
-ballAngle = (angle/pi)*180
+ballAngle = (angle / math.pi) * 180
 
 print(ballAngle)

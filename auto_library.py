@@ -7,7 +7,5 @@ pyautogui.moveTo(100,100)
 
 pyautogui.click(clicks=3, interval=1)
 
-
-SVDSVD
-
+#SVDSVD
 
