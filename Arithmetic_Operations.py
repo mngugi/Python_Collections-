@@ -1,3 +1,19 @@
+---
+jupyter:
+  jupytext:
+    cell_metadata_filter: -all
+    custom_cell_magics: kql
+    text_representation:
+      extension: .py
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.11.2
+  kernelspec:
+    display_name: .venv
+    language: python
+    name: python3
+---
+
 import numpy as np
 # create an array of 5 integers
 arr = np.arange(5)
