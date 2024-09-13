@@ -6,7 +6,8 @@
 # Circle Area: 12.57 square meters
 # Cylinder Surface Area: 150.80 square meters
 # Total Area: 163.36 square meters
-
+#
+# This program is subsequently used as a module for the program Area_CircleImportTest.py
 import math
 
 def calculate_circle_area(radius):
