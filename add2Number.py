@@ -1,5 +1,11 @@
 
-user_input = input("Eneter Two Numbers: ")
+'''
+Spyder Editor
+Author : Mwangi
+Purpose : Enter two numbers and per addition using a
+add_TwoNumbers() function.
+'''
+user_input = input("Enter Two Numbers: ")
 
 def add_TwoNumbers(i,j):
     return i + j
