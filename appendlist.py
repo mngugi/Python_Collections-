@@ -6,7 +6,18 @@ Purpose : Simple program to append data types creating a lists
 
 []: This is the literal syntax for creating an empty list in Python.
 empty = []: This assigns the empty list to the variable empty.
-
+For example the expected outcome is :
+1. Append an integer
+-------------------
+2. Append a float
+-------------------
+3. Append a double (float in Python)
+-------------------
+4. Append a string
+-------------------
+-------------------
+[21, 50.0889, 2.0, 'Stingo', 'Stingo is a funny name!', ':0 , :))']
+-------------------
 """
 from typing import List, Union
 
