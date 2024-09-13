@@ -8,24 +8,29 @@ Purpose : Simple program to append data types creating a lists
 empty = []: This assigns the empty list to the variable empty.
 
 """
-empty = []
-print("1.Append an integer")
+from typing import List, Union
+
+# Define a list that can hold integers, floats, and strings
+empty: List[Union[int, float, str]] = []
+
+print("1. Append an integer")
 print("-------------------")
 empty.append(21)
-print("2.Append a float")
+
+print("2. Append a float")
 print("-------------------")
 empty.append(50.0889)
-print("3.Append a double")
+
+print("3. Append a double (float in Python)")
 print("-------------------")
 empty.append(2.0)
-print("4.Append a string")
+
+print("4. Append a string")
 print("-------------------")
 empty.append('Stingo')
 print("-------------------")
 empty.append("Stingo is a funny name!")
 empty.append(":0 , :))")
+
 print(empty)
 print("-------------------")
-
-
-
