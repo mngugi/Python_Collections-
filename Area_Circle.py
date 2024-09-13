@@ -1,3 +1,12 @@
+# Script Name: Area_Circle.py
+# Author: Mwangi
+# Purpose: This script Calculates the area of a circle.
+# Usage: For example the expected outcome is :
+#
+# Circle Area: 12.57 square meters
+# Cylinder Surface Area: 150.80 square meters
+# Total Area: 163.36 square meters
+
 import math
 
 def calculate_circle_area(radius):
