@@ -34,6 +34,7 @@ if __name__ == "__main__":
     circle_area = calculate_circle_area(radius)
     cylinder_area = calculate_cylinder_area(radius, height)
     total_area = circle_area + cylinder_area
+    # print the results
     print(f"Circle Area: {circle_area:.2f} square meters")
     print(f"Cylinder Surface Area: {cylinder_area:.2f} square meters")
     print(f"Total Area: {total_area:.2f} square meters")
