@@ -10,7 +10,7 @@
 
 def add(*numbers: float) -> float:
     return sum(numbers)
-
+   
     if __name__ == ' __main__ ':
 
         print(add(52,63,98))    
