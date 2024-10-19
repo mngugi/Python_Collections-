@@ -1,6 +1,8 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel # type: ignore
+import warnings
 
+warnings.filterwarnings("ignore")
 def main():
    # Create the application instance
    app = QApplication(sys.argv)
