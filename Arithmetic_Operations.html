@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append List Example</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+    <h1>Append Items to a List in Python</h1>
+    <py-script>
+        from typing import List, Union
+
+        # Define a list that can hold integers, floats, and strings
+        empty: List[Union[int, float, str]] = []
+
+        # Append different data types
+        empty.append(21)             # Append an integer
+        empty.append(50.0889)        # Append a float
+        empty.append(2.0)            # Append a double (float in Python)
+        empty.append("Stingo")       # Append a string
+        empty.append("Stingo is a funny name!")
+        empty.append(":0 , :))")
+
+        # Output the list to the page
+        display(empty)
+    </py-script>
+</body>
+</html>
