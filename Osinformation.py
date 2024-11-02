@@ -1,5 +1,4 @@
 import platform
-import os
 
 # Get OS name and version
 os_name = platform.system()
