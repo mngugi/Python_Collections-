@@ -1,1 +1,1 @@
-i = int(raw_input("Enter   integer: "))*3
+i = int (input("Enter   integer: "))*3
