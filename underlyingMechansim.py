@@ -11,5 +11,8 @@ id(y)
 # comples number has two parts an iaginary number and a real number.
 # for example
 
-float c = 1j
+c = 1j
+print(type(c))
+
+
 # call type(c)
