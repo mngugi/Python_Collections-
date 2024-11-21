@@ -1,3 +1,4 @@
+import math
  # x is assigned to the value 12345
  # y is assigned to the value 12345
  # to assign objects in memory
@@ -10,5 +11,5 @@ id(y)
 # comples number has two parts an iaginary number and a real number.
 # for example
 
-c = 1j
+float c = 1j
 # call type(c)
