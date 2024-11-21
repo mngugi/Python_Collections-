@@ -14,5 +14,11 @@ id(y)
 c = 1j
 print(type(c))
 
+c = 3 + 1j  # A complex number with real part 3 and imaginary part 1
+print(c)
+print(c.real)  # Outputs: 3.0
+print(c.imag)  # Outputs: 1.0
+
+
 
 # call type(c)
