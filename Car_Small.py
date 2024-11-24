@@ -1,3 +1,4 @@
+# a class called car.
 class Car:
     def printSize(self):
         print("small")
