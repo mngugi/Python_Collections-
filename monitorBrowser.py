@@ -1,40 +1,20 @@
-import subprocess
-import re
+import psutil
 import time
 
-# List of browser process names to monitor
 browsers = ["chrome", "firefox", "msedge", "brave", "safari"]
 
-def monitor_browser_activity():
+def monitor_browser_processes():
     while True:
-        try:
-            # Execute wmctrl command to get active window details
-            result = subprocess.check_output(["wmctrl", "-lp"], encoding='utf-8')
-            active_window = subprocess.check_output(["xdotool", "getactivewindow", "getwindowname"], encoding='utf-8').strip()
-            
-            for browser in browsers:
-                if browser in active_window.lower():
-                    print(f"Active Browser: {browser.capitalize()}")
-                    print(f"Window Title: {active_window}")
-                    
-                    # Extract URL from the window title
-                    url = extract_url_from_title(active_window)
-                    if url:
-                        print(f"Detected URL: {url}")
-                    
-            time.sleep(2)
+        found = False
+        for process in psutil.process_iter(['pid', 'name']):
+            if any(browser in process.info['name'].lower() for browser in browsers):
+                print(f"Browser detected: {process.info['name']} (PID: {process.info['pid']})")
+                found = True
         
-        except Exception as e:
-            print(f"Error: {e}")
-            time.sleep(2)
-
-def extract_url_from_title(title):
-    url_pattern = re.compile(r'https?://[^\s]+')
-    match = url_pattern.search(title)
-    if match:
-        return match.group(0)
-    return None
+        if not found:
+            print("No browsers detected.")
+        time.sleep(5)
 
 if __name__ == "__main__":
-    monitor_browser_activity()
+    monitor_browser_processes()
 
