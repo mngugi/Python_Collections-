@@ -4,7 +4,7 @@ import socket
 import re
 import time
 
-browsers = ["chrome", "firefox", "msedge", "brave", "safari"]
+browsers = ["chrome", "firefox", "msedge", "brave", "safari", "mullvad"]
 
 def get_network_connections(pid):
     """Retrieve network connections for a given PID."""
