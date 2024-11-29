@@ -1,30 +1,33 @@
-import psutil
-import time
-import pygetwindow as gw
+import subprocess
 import re
+import time
 
-# Function to monitor browser activity
+# List of browser process names to monitor
+browsers = ["chrome", "firefox", "msedge", "brave", "safari"]
+
 def monitor_browser_activity():
-    browsers = ["chrome.exe", "firefox.exe", "msedge.exe", "brave.exe", "safari.exe"]  # Add other browser names if needed
-    
     while True:
-        active_window = gw.getActiveWindow()
-        if active_window:
-            window_title = active_window.title.lower()
-            process_name = active_window.title.split()[-1].lower()  # Extract process name
+        try:
+            # Execute wmctrl command to get active window details
+            result = subprocess.check_output(["wmctrl", "-lp"], encoding='utf-8')
+            active_window = subprocess.check_output(["xdotool", "getactivewindow", "getwindowname"], encoding='utf-8').strip()
             
-            if any(browser in process_name for browser in browsers):
-                print(f"Browser Active: {process_name}")
-                print(f"Window Title: {window_title}")
-                
-                # Extract URL if it's visible in the window title (common for Chrome and Firefox)
-                url = extract_url_from_title(window_title)
-                if url:
-                    print(f"Detected URL: {url}")
+            for browser in browsers:
+                if browser in active_window.lower():
+                    print(f"Active Browser: {browser.capitalize()}")
+                    print(f"Window Title: {active_window}")
+                    
+                    # Extract URL from the window title
+                    url = extract_url_from_title(active_window)
+                    if url:
+                        print(f"Detected URL: {url}")
+                    
+            time.sleep(2)
         
-        time.sleep(2)  # Check every 2 seconds
+        except Exception as e:
+            print(f"Error: {e}")
+            time.sleep(2)
 
-# Function to extract URLs from window titles
 def extract_url_from_title(title):
     url_pattern = re.compile(r'https?://[^\s]+')
     match = url_pattern.search(title)
