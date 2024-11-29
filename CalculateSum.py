@@ -9,4 +9,5 @@
 
 import calculator
 
+#print the results 
 print(calculator.add(10,12,52,68,37))
