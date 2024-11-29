@@ -1,7 +1,7 @@
 import psutil
 import time
 
-browsers = ["chrome", "firefox", "msedge", "brave", "safari"]
+browsers = ["chrome", "firefox", "msedge", "brave", "safari", "mullvad"]
 
 def monitor_browser_processes():
     while True:
