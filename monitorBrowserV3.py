@@ -1,22 +1,23 @@
 import psutil
 import subprocess
-import socket
+import re
 import time
 
-browsers = ["chrome", "firefox", "msedge", "brave", "safari"]
+browsers = ["chrome", "firefox", "msedge", "brave","mullvad", "safari"]
 
 def get_network_connections(pid):
-    """Retrieve network connections for a given PID."""
+    """Retrieve remote IPs from network connections for a given PID."""
     try:
         # Use lsof to list open network connections
         result = subprocess.check_output(f"lsof -Pan -p {pid} -i", shell=True, encoding='utf-8')
         connections = []
         for line in result.splitlines():
             if "TCP" in line and "ESTABLISHED" in line:
-                parts = line.split()
-                local_address = parts[-2]
-                remote_address = parts[-1].split("->")[-1]  # Extract remote address
-                connections.append(remote_address.split(":")[0])  # Get IP only
+                # Extract the remote IP using regex
+                match = re.search(r'(\d+\.\d+\.\d+\.\d+):\d+', line)
+                if match:
+                    remote_ip = match.group(1)
+                    connections.append(remote_ip)
         return connections
     except subprocess.CalledProcessError:
         return []
