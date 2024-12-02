@@ -1,3 +1,4 @@
+# a program that joins and splits characters 
 import re
 
 charcter = 'moussasosa'
