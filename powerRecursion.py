@@ -6,5 +6,5 @@ def power(base, exp):
 base = int(input("Enter the base number: "))
 exp = int(input("Enter the exponent: "))
 
-print(power(base, exp))
+print("Answer: ", power(base, exp))
     
