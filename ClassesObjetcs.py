@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """ 
-Author : Mwangi
+Author :Peter Mwangi
 Purpose : this is a classes and objects in python  
 """
 class Football:
