@@ -5,5 +5,8 @@ while count < 12 :
     count +=1
 
     print("---------\n")
-    print("Key Number of 2: ", count2)
-    count2 +=2
+
+    while count < 12 :
+        print("Key Number of 2: ", count2)
+        count2 +=2
+        break
