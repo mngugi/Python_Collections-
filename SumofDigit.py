@@ -1,3 +1,4 @@
+# Python Program to Find Sum of Digit of a Number Without Recursion
 def number_sum(number):
     total = 0
     number = abs(number)
