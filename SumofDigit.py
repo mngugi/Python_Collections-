@@ -11,4 +11,4 @@ def number_sum(number):
 number = int(input("Enter a number: "))
 result = number_sum(number)
 
-print(f" The Sum of the digits of {number} is {result}.")
+print(f"The Sum of the digits of {number} is {result}.")
