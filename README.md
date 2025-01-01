@@ -5100,3 +5100,51 @@ using the pandas library to create a DataFrame and perform some basic operations
 It will display the DataFrame, the number of rows and columns, the maximum and minimum temperature values, and the average temperature value.
 
 ---
+### question27.py
+
+Code : 
+
+``` python
+import pandas as pd
+
+airLineData = pd.read_csv("Airline Dataset.csv", header=0, sep=",")
+
+print(airLineData.head())
+print("Airline Data Information:", airLineData.info())
+print(airLineData.describe())
+
+```
+`import pandas as pd:`
+
+* The pandas library is imported and aliased as pd for convenience.
+* Pandas is widely used for data manipulation and analysis.
+
+`pd.read_csv():`
+
+This function reads a CSV (Comma-Separated Values) file and loads it into a pandas DataFrame.
+**Parameters used:**
+* `"Airline Dataset.csv":` The filename of the dataset.
+*   `header=0:` The first row of the CSV file is treated as the column names.
+*   `sep=",":` Specifies that columns in the dataset are separated by commas.
+
+`airLineData.head():`
+
+* The `.head() `method displays the first 5 rows of the DataFrame by default.
+* This provides a preview of the dataset, showing the column names and initial data.
+
+`airLineData.info():`
+
+The `.info()` method provides a concise summary of the DataFrame:
+* Number of rows and columns.
+* Column names and their respective data types.
+* Non-null value counts for each column.
+* Memory usage of the DataFrame.
+
+`airLineData.describe():`
+
+The `.describe()` method generates summary statistics for numeric columns:
+* Count: Number of non-missing values.
+* Mean:Average value.
+* Std: Standard deviation (a measure of spread).
+* Min/Max: Minimum and maximum values.
+* 25%/50%/75%:Percentiles (25th, median, and 75th).
