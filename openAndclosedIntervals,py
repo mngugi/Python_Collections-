@@ -1,0 +1,14 @@
+import pandas as pd
+
+# Example dataset
+data = {'Age': [15, 22, 34, 45, 67, 80]}
+df = pd.DataFrame(data)
+
+# Define intervals for age groups
+bins = [0, 18, 35, 65, float('inf')]
+labels = ['Minor', 'Young Adult', 'Adult', 'Senior']
+
+# Create a new column for age group
+df['Age Group'] = pd.cut(df['Age'], bins=bins, labels=labels, right=False)
+
+print(df)
