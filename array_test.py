@@ -1,3 +1,6 @@
+'''
+this program creates an array of 5 elements
+'''
 import array as arr
 
 # create an array of 5 integers using a function arr1()
