@@ -9,9 +9,9 @@ r = Tk()
 # this function will open a text file only after button is pressed
 def open_file():
     f = askopenfile(mode ='r', filetypes =[('text file', '*.txt')]) #only txt files will be opened
-     if f is not None:
+    if f is not None:
         content = f.read()
-        print(content)
+        print = print(content)
 #Below code is reuseable in the event of opening a file is required
 #with open("File_Open.txt", "r") as f:
 #    Label(r, text=f.read()).pack()
