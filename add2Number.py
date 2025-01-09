@@ -1,7 +1,12 @@
 import nltk
-import pyfiglet
+import pyfiglet # type: ignore
 
-ascii_art = pyfiglet.figlet_format("Add Numbers")
+def display_title(title):
+    ascii_art = pyfiglet.figlet_format(title)
+    print(ascii_art)
+
+if __name__ == "__main__":
+    display_title("Add Two Numbers")
 '''
 # Script Name: add_two_numbers.py
 # Author: Mwangi
