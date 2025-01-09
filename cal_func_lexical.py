@@ -2,6 +2,16 @@
 from nltk.book import *
 import math 
 
+import pyfiglet
+
+def display_title(title):
+    print("✨" * 5 + f" {title} " + "✨" * 5)
+
+if __name__ == "__main__":
+    display_title("Cal Function Lexical")
+
+
+
 def lexical_diversity(text):
     return len(text)/len(set(text))
     
