@@ -2,6 +2,14 @@
 this program creates an array of 5 elements
 '''
 import array as arr
+import pyfiglet # type: ignore
+
+def display_title(title):
+    ascii_art = pyfiglet.figlet_format(title)
+    print(ascii_art)
+
+if __name__ == "__main__":
+    display_title("Array Test")
 
 # create an array of 5 integers using a function arr1()
 def arr1():
