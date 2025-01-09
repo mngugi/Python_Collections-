@@ -1,5 +1,13 @@
 # Your updated Python code here
 # Python Acronyms Dictionary
+import pyfiglet # type: ignore
+
+def display_title(title):
+    ascii_art = pyfiglet.figlet_format(title)
+    print(ascii_art)
+
+if __name__ == "__main__":
+    display_title("Python Acronyms")
 
 '''
 # Script Name: add_two_numbers.py
