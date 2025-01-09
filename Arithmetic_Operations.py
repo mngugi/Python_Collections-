@@ -16,6 +16,14 @@ jupyter:
 ---
 '''
 import numpy as np
+import pyfiglet # type: ignore
+
+def display_title(title):
+    ascii_art = pyfiglet.figlet_format(title)
+    print(ascii_art)
+
+if __name__ == "__main__":
+    display_title("Arithmetic Operations")
 # create an array of 5 integers
 arr = np.arange(5)
 print("array1", arr)
