@@ -9,7 +9,14 @@
 #
 # This program is subsequently used as a module for the program Area_CircleImportTest.py
 import math
+import pyfiglet # type: ignore
 
+def display_title(title):
+    ascii_art = pyfiglet.figlet_format(title)
+    print(ascii_art)
+
+if __name__ == "__main__":
+    display_title("Area of Circle")
 def calculate_circle_area(radius):
     """Calculates the area of a circle.
 
