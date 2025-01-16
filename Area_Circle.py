@@ -8,6 +8,8 @@
 # Total Area: 163.36 square meters
 #
 # This program is subsequently used as a module for the program Area_CircleImportTest.py
+
+
 import math
 import pyfiglet # type: ignore
 
