@@ -48,3 +48,4 @@ print("Python Acronyms and Their Meanings:\n")
 for acronym, meaning in acronyms.items():
     text = Text(f"{acronym}: {meaning}", style="bold green")
     print(f"{acronym}: {meaning}")
+    console.print(text)
