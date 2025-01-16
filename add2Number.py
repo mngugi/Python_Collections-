@@ -1,4 +1,7 @@
 import nltk
+from rich.console import Console
+from rich.text import Text
+
 import pyfiglet # type: ignore
 
 def display_title(title):
@@ -29,6 +32,7 @@ if __name__ == "__main__":
 
 '''
 user_input = input("Enter Two Numbers: ") # input method.
+console = Console()
 
 def add_TwoNumbers(i,j): # creating a add_TwoNumbers() function
 
@@ -47,5 +51,5 @@ numbers = user_input.split()
 num1 = int(numbers[0]) # numbers at the first position
 num2 = int(numbers[1]) # numbers at the second position
 
-
+text = Text(style="bold orange")
 print(add_TwoNumbers(i = num1, j=num2)) # print tht results
