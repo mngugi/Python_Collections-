@@ -1,6 +1,8 @@
 # Your updated Python code here
 # Python Acronyms Dictionary
 import pyfiglet # type: ignore
+from rich.console import Console
+from rich.text import Text 
 
 def display_title(title):
     ascii_art = pyfiglet.figlet_format(title)
@@ -38,10 +40,11 @@ acronyms = {
     "Django": "Named after Django Reinhardt, jazz guitarist",
     "Flask": "A lightweight web framework in Python",
     "JSON": "JavaScript Object Notation",
-    [bold/green],
+    
 }
 
 # Print Acronyms
 print("Python Acronyms and Their Meanings:\n")
 for acronym, meaning in acronyms.items():
+    text = Text(f"{acronym}: {meaning}", style="bold green")
     print(f"{acronym}: {meaning}")
