@@ -38,6 +38,7 @@ acronyms = {
     "Django": "Named after Django Reinhardt, jazz guitarist",
     "Flask": "A lightweight web framework in Python",
     "JSON": "JavaScript Object Notation",
+    [bold/green],
 }
 
 # Print Acronyms
