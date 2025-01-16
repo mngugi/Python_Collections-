@@ -45,7 +45,7 @@ acronyms = {
 
 # Print Acronyms
 # creat a console 
-console = console()
+console = Console()
 print("Python Acronyms and Their Meanings:\n")
 for acronym, meaning in acronyms.items():
     text = Text(f"{acronym}: {meaning}", style="bold green")
