@@ -10,6 +10,7 @@ def display_title(title):
 
 if __name__ == "__main__":
     display_title("Add Two Numbers")
+    
 '''
 # Script Name: add_two_numbers.py
 # Author: Mwangi
@@ -52,5 +53,5 @@ num1 = int(numbers[0]) # numbers at the first position
 num2 = int(numbers[1]) # numbers at the second position
 
 text = Text(style="bold orange")
-console.print(add_TwoNumbers(i = num1, j=num2)) # print tht results
-
+print(add_TwoNumbers(i = num1, j=num2)) # print tht results
+console
