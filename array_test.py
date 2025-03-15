@@ -2,7 +2,7 @@
 this program creates an array of 5 elements
 '''
 import array as arr
-import pyfiglet # type: ignore
+import pyfiglet 
 
 def display_title(title):
     ascii_art = pyfiglet.figlet_format(title)
