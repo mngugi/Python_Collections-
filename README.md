@@ -1,4 +1,4 @@
-# Python_Collections
+## Python_Collections
 
 **Python_Collections** is a practical exploration of Python’s built-in data structures and the `collections` module. This repository is designed to help developers understand and efficiently use Python collections like lists, sets, tuples, dictionaries, and specialized types from the `collections` module.
 
