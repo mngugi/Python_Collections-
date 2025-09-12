@@ -1,11 +1,19 @@
+import pyfiglet
 import nltk
 from rich.console import Console
 from rich.text import Text
+from pyfiglet import Figlet
+from termcolor import colored
+from colorama import init
 
-import pyfiglet # type: ignore
+# Initialize colorama for Windows compatibility (does nothing on Linux/macOS)
+init()
+
+
 
 def display_title(title):
     ascii_art = pyfiglet.figlet_format(title)
+    ascii_art = colored(ascii_art, 'light_blue')
     print(ascii_art)
 
 if __name__ == "__main__":
