@@ -33,7 +33,6 @@
    ```bash
    python dicts/nested_dict_example.py
    ```
-
 ---
 
 ## 🧠 Learning Objectives
