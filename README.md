@@ -33,6 +33,7 @@
    ```bash
    python dicts/nested_dict_example.py
    ```
+
 ---
 
 ## 🧠 Learning Objectives
@@ -98,6 +99,7 @@ In this code, the function `Hello()` simply returns the string `"Hello World Cod
 
 Functions can also take arguments, which are values that can be passed to the function when it is called. The arguments are placed inside the parentheses in the function definition, and can be used inside the function as variables.
 Functions can also return a value using the return keyword. The returned value can be stored in a variable or used in an expression.
+
 Overall, functions are a useful tool for organizing and reusing code in your programs.
 
 ---
