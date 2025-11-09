@@ -29,6 +29,7 @@ def mod_1a() :
     global j 
     j = 'strings' 
     print ('----')
+    
 # read the values and printing the results     
 read()
 mod1()
