@@ -34,7 +34,7 @@ print(list(things4))
 
 # or all on one line
 print(list(map((lambda value: 5*value), [1, 2, 3])))
-lst = [["hi", "bye"], "hello", "Globa Warming!", [9, 2], 4]
+lst = [["hi", "bye"], "hello ", "Globa Warming! ", [9, 2], 4]
 
 greeting_doubled = list(map(lambda x: x*2, lst))
 print(greeting_doubled)
